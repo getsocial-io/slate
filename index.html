@@ -263,7 +263,7 @@ curl <span class="s2">"api_endpoint_here"</span>
 <aside class="notice">
 You must replace <code>4580df25599d5baf7fdd</code> with your personal API key.
 </aside>
-<h1 id='stories'>Stories</h1><h2 id='get-top-stories'>Get Top Stories</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/top-stories?limit=3&amp;metric=referrals"</span>
+<h1 id='stories'>Stories</h1><h2 id='get-top-stories'>Get Top Stories</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/stories/top?limit=3&amp;metric=referrals"</span>
   -H <span class="s2">"Authorization: 4580df25599d5baf7fdd"</span>
 </code></pre>
 <blockquote>
@@ -295,7 +295,7 @@ You must replace <code>4580df25599d5baf7fdd</code> with your personal API key.
 </span></code></pre>
 <p>This endpoint retrieves the top stories in the last 24 hours sorted by a specific metric. It can be used to retrieve the mosted shared or most referred stories.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://analytics.getsocial.io/api/top-stories</code></p>
+<p><code>GET http://analytics.getsocial.io/api/stories/top</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
