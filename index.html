@@ -228,7 +228,7 @@
             <a href="#stories" class="toc-h1 toc-link" data-title="Stories">Stories</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-top-stories" class="toc-h2 toc-link" data-title="Get Top Stories">Get Top Stories</a>
+                    <a href="#retrieving-top-stories" class="toc-h2 toc-link" data-title="Retrieving Top Stories">Retrieving Top Stories</a>
                   </li>
               </ul>
           </li>
@@ -241,7 +241,7 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the GetSocial API! You can use our API to access GetSocial API endpoints, which provides data access to sharing statistics of news articles in public social networks &amp; private messaging apps.</p>
+<p>Welcome to the GetSocial API! You can use it to access GetSocial API endpoints, which provide data access to sharing statistics of news articles in public social networks &amp; private messaging apps.</p>
 <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authorize, use this code:</p>
@@ -256,14 +256,14 @@ curl <span class="s2">"api_endpoint_here"</span>
 
 <p>GetSocial uses API keys to allow access to the API. </p>
 
-<p>GetSocial expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>GetSocial expects that an API key is included in all server requests, in a header as follows:</p>
 
 <p><code>Authorization: 4580df25599d5baf7fdd</code></p>
 
 <aside class="notice">
 You must replace <code>4580df25599d5baf7fdd</code> with your personal API key.
 </aside>
-<h1 id='stories'>Stories</h1><h2 id='get-top-stories'>Get Top Stories</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/stories/top?limit=3&amp;metric=referrals"</span>
+<h1 id='stories'>Stories</h1><h2 id='retrieving-top-stories'>Retrieving Top Stories</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/stories/top?limit=3&amp;metric=referrals"</span>
   -H <span class="s2">"Authorization: 4580df25599d5baf7fdd"</span>
 </code></pre>
 <blockquote>
@@ -334,7 +334,7 @@ You must replace <code>4580df25599d5baf7fdd</code> with your personal API key.
 </thead><tbody>
 <tr>
 <td>400</td>
-<td>Bad Request -- Your request sucks.</td>
+<td>Bad Request -- Malformed request syntax.</td>
 </tr>
 <tr>
 <td>401</td>
@@ -342,7 +342,7 @@ You must replace <code>4580df25599d5baf7fdd</code> with your personal API key.
 </tr>
 <tr>
 <td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t JSON.</td>
 </tr>
 <tr>
 <td>500</td>
