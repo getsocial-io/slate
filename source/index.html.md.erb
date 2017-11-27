@@ -12,7 +12,7 @@ search: true
 
 # Introduction
 
-Welcome to the GetSocial API! You can use our API to access GetSocial API endpoints, which provides data access to sharing statistics of news articles in public social networks & private messaging apps.
+Welcome to the GetSocial API! You can use it to access GetSocial API endpoints, which provide data access to sharing statistics of news articles in public social networks & private messaging apps.
 
 
 # Authentication
@@ -29,7 +29,7 @@ curl "api_endpoint_here"
 
 GetSocial uses API keys to allow access to the API. <%# You can register a new GetSocial API key at our [developer portal](http://example.com/developers). %>
 
-GetSocial expects for the API key to be included in all API requests to the server in a header that looks like the following:
+GetSocial expects that an API key is included in all server requests, in a header as follows:
 
 `Authorization: 4580df25599d5baf7fdd`
 
@@ -39,7 +39,7 @@ You must replace <code>4580df25599d5baf7fdd</code> with your personal API key.
 
 # Stories
 
-## Get Top Stories
+## Retrieving Top Stories
 
 ```shell
 curl "analytics.getsocial.io/api/stories/top?limit=3&metric=referrals"
@@ -59,14 +59,14 @@ curl "analytics.getsocial.io/api/stories/top?limit=3&metric=referrals"
   },
   {
     "id": "f15a173dd497",
-    "path": "/sport/article-x",
+    "name": "/sport/article-x",
     "title": "Article x",
     "shares": 50,
     "referrals": 110
   },
   {
     "id": "5f341a5d899a",
-    "path": "/sport/article-y",
+    "name": "/sport/article-y",
     "title": "Article y",
     "shares": 100,
     "referrals": 100
