@@ -1,0 +1,91 @@
+# Channels
+
+## Fetch Channel
+
+```shell
+curl "analytics.getsocial.io/api/channels/facebook?from=2018-01-01&to=2018-01-31"
+  -H "Authorization: abcdef0123abcdef0123"
+```
+
+> The above command returns a JSON structured like this:
+
+```json
+{
+  "identifier": "facebook",
+  "visits": 213,
+  "shares": 40,
+  "referrals": 150
+}
+```
+
+This endpoint retrieves the channel information with total visits, shares and referrals between the two dates specified (inclusive).
+
+
+### HTTP Request
+
+`GET http://analytics.getsocial.io/api/channels/channel_id`
+
+### Query Parameters
+
+Parameter  | Type     | Default      | Description
+---------- | -------- | ------------ | --------
+channel_id | `string` | -            | Channel identifier
+from       | `string` | -            | Date from which to start counting data
+to         | `string` | -            | Date to which to stop counting data
+
+
+### Returns
+
+Channel with total visits, shares and referrals.
+
+
+## Top Users
+
+
+```shell
+curl "analytics.getsocial.io/api/channels/abcd1234/users?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
+  -H "Authorization: abcdef0123abcdef0123"
+```
+
+> The above command returns a JSON structured like this:
+
+```json
+[
+  {
+    "identifier": "friend@gmail.com",
+    "visits": 113,
+    "shares": 21,
+    "referrals": 64
+  },
+  {
+    "identifier": "enemy@gmail.com",
+    "visits": 81,
+    "shares": 18,
+    "referrals": 72
+  }
+]
+```
+
+This endpoint retrieves the top users for the channel, with total visits, shares and referrals between the two dates specified (inclusive).
+
+
+### HTTP Request
+
+`GET http://analytics.getsocial.io/api/channels/channel_id/users`
+
+### Query Parameters
+
+Parameter  | Type     | Default      | Description
+---------- | -------- | ------------ | --------
+channel_id | `string` | -            | Channel identifier
+from      | `string` | -            | Date from which to start counting data
+to      | `string` | -            | Date to which to stop counting data
+sort_by   | `string` | `visits`     | Criteria by which to sort top users, can be `visits`, `shares` or `referrals`
+limit  | `number` | 10           | Max number of results to retrieve
+
+
+### Returns
+
+List of channel top users with total visits, shares and referrals.
+
+
