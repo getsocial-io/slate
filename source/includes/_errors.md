@@ -1,4 +1,4 @@
-# Errors
+# 6. Errors
 
 The GetSocial API uses the following error codes:
 
