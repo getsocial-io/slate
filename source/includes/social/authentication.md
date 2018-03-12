@@ -1,4 +1,6 @@
-# 2. Authentication
+# Social API
+
+## 1. Authentication
 
 > To authorize, use this code:
 

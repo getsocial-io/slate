@@ -1,9 +1,9 @@
-# 4. Stories
+## 3. Stories
 
-## 4.1. Top Stories
+### 3.1. Top Stories
 
 ```shell
-curl "analytics.getsocial.io/api/v1/stories/top?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
+curl "analytics.getsocial.io/api/social/stories/top?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -29,11 +29,11 @@ curl "analytics.getsocial.io/api/v1/stories/top?from=2018-01-01&to=2018-01-3&sor
 This endpoint retrieves the overall top stories, with total visits, shares and referrals between the two dates specified (inclusive).
 
 
-### HTTP Request
+#### HTTP Request
 
-`GET http://analytics.getsocial.io/api/v1/stories/top`
+`GET http://analytics.getsocial.io/api/social/stories/top`
 
-### Query Parameters
+#### Query Parameters
 
 Parameter | Type     | Default      | Description
 --------- | -------- | ------------ | --------
@@ -43,12 +43,12 @@ sort_by   | `string` | `shares`     | Criteria by which to sort stories, can be 
 limit     | `number` | 10           | Max number of results to retrieve
 
 
-### Returns
+#### Returns
 
 List of top stories with total visits, shares and referrals.
 
 
-## 4.2. Top Stories in last 24-hours
+### 3.2. Top Stories in last 24-hours
 
 ```shell
 curl "analytics.getsocial.io/api/stories/top?limit=3&sort_by=referrals"
@@ -85,11 +85,11 @@ curl "analytics.getsocial.io/api/stories/top?limit=3&sort_by=referrals"
 
 This endpoint retrieves the top stories in the last 24 hours sorted by a specific metric. It can be used to retrieve the most shared or most referred stories.
 
-### HTTP Request
+#### HTTP Request
 
 `GET http://analytics.getsocial.io/api/stories/top`
 
-### Query Parameters
+#### Query Parameters
 
 Parameter | Type     | Default | Description
 --------- | -------- | --------- | --------
@@ -97,15 +97,15 @@ limit     | `number` | 10 | Number of stories to be retrieved
 sort_by   | `string` | shares | Metric used to sort stories. Accepted values are `shares` and `referrals`
 
 
-### Returns
+#### Returns
 
 List of stories sorted by `sort_by`.
 
 
-## 4.3. Fetch Story
+### 3.3. Fetch Story
 
 ```shell
-curl "analytics.getsocial.io/api/v1/stories/abcd1234?from=2018-01-01&to=2018-01-31"
+curl "analytics.getsocial.io/api/social/stories/abcd1234?from=2018-01-01&to=2018-01-31"
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -123,11 +123,11 @@ curl "analytics.getsocial.io/api/v1/stories/abcd1234?from=2018-01-01&to=2018-01-
 This endpoint retrieves the story information with total visits, shares and referrals between the two dates specified (inclusive).
 
 
-### HTTP Request
+#### HTTP Request
 
-`GET http://analytics.getsocial.io/api/v1/stories/story_id`
+`GET http://analytics.getsocial.io/api/social/stories/story_id`
 
-### Query Parameters
+#### Query Parameters
 
 Parameter | Type     | Default      | Description
 --------- | -------- | ------------ | --------
@@ -136,12 +136,12 @@ from      | `string` | -            | Date from which to start counting data
 to        | `string` | -            | Date to which to stop counting data
 
 
-### Returns
+#### Returns
 
 Story with total visits, shares and referrals.
 
 
-## 4.4. Fetch Story (legacy)
+### 3.4. Fetch Story (legacy)
 
 ```shell
 curl "analytics.getsocial.io/api/stories/abcd1234?from=2018-01-01&to=2018-01-31"
@@ -163,11 +163,11 @@ curl "analytics.getsocial.io/api/stories/abcd1234?from=2018-01-01&to=2018-01-31"
 This endpoint retrieves the story with total shares and referrals between the two dates specified.
 
 
-### HTTP Request
+#### HTTP Request
 
 `GET http://analytics.getsocial.io/api/stories/story_id`
 
-### Query Parameters
+#### Query Parameters
 
 Parameter | Type     | Default      | Description
 --------- | -------- | ------------ | ---------
@@ -176,16 +176,16 @@ from      | `string` | -            | Date from which to start grouping data
 to        | `string` | -            | Date to which to stop grouping data
 
 
-### Returns
+#### Returns
 
 Story with total shares and referrals.
 
 
-## 4.5. Top Story Users
+### 3.5. Top Story Users
 
 
 ```shell
-curl "analytics.getsocial.io/api/v1/stories/abcd1234/users?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
+curl "analytics.getsocial.io/api/social/stories/abcd1234/users?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -211,11 +211,11 @@ curl "analytics.getsocial.io/api/v1/stories/abcd1234/users?from=2018-01-01&to=20
 This endpoint retrieves the top users for the story, with total visits, shares and referrals between the two dates specified (inclusive).
 
 
-### HTTP Request
+#### HTTP Request
 
-`GET http://analytics.getsocial.io/api/v1/stories/story_id/users`
+`GET http://analytics.getsocial.io/api/social/stories/story_id/users`
 
-### Query Parameters
+#### Query Parameters
 
 Parameter | Type     | Default      | Description
 --------- | -------- | ------------ | --------
@@ -226,15 +226,15 @@ sort_by   | `string` | `shares`     | Criteria by which to sort top users, can b
 limit     | `number` | 10           | Max number of results to retrieve
 
 
-### Returns
+#### Returns
 
 List of story top users with total visits, shares and referrals.
 
-## 4.6. Top Story Channels
+### 3.6. Top Story Channels
 
 
 ```shell
-curl "analytics.getsocial.io/api/v1/stories/abcd1234/channels?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
+curl "analytics.getsocial.io/api/social/stories/abcd1234/channels?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -260,11 +260,11 @@ curl "analytics.getsocial.io/api/v1/stories/abcd1234/channels?from=2018-01-01&to
 This endpoint retrieves the top channels for the story, with total visits, shares and referrals between the two dates specified (inclusive).
 
 
-### HTTP Request
+#### HTTP Request
 
-`GET http://analytics.getsocial.io/api/v1/stories/story_id/channels`
+`GET http://analytics.getsocial.io/api/social/stories/story_id/channels`
 
-### Query Parameters
+#### Query Parameters
 
 Parameter | Type     | Default      | Description
 --------- | -------- | ------------ | --------
@@ -275,6 +275,6 @@ sort_by   | `string` | `shares`     | Criteria by which to sort top channels, ca
 limit     | `number` | 10           | Max number of results to retrieve
 
 
-### Returns
+#### Returns
 
 List of story top channels with total visits, shares and referrals.

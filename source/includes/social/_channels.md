@@ -1,9 +1,9 @@
-# 5. Channels
+## 4. Channels
 
-## 5.1. Top Channels
+### 4.1. Top Channels
 
 ```shell
-curl "analytics.getsocial.io/api/v1/channels/top?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
+curl "analytics.getsocial.io/api/social/channels/top?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -29,11 +29,11 @@ curl "analytics.getsocial.io/api/v1/channels/top?from=2018-01-01&to=2018-01-3&so
 This endpoint retrieves the overall top channels, with total visits, shares and referrals between the two dates specified (inclusive).
 
 
-### HTTP Request
+#### HTTP Request
 
-`GET http://analytics.getsocial.io/api/v1/channels/top`
+`GET http://analytics.getsocial.io/api/social/channels/top`
 
-### Query Parameters
+#### Query Parameters
 
 Parameter | Type     | Default      | Description
 --------- | -------- | ------------ | --------
@@ -43,15 +43,15 @@ sort_by   | `string` | `shares`     | Criteria by which to sort channels, can be
 limit     | `number` | 10           | Max number of results to retrieve
 
 
-### Returns
+#### Returns
 
 List of top channels with total visits, shares and referrals.
 
 
-## 5.2. Fetch Channel
+### 4.2. Fetch Channel
 
 ```shell
-curl "analytics.getsocial.io/api/v1/channels/facebook?from=2018-01-01&to=2018-01-31"
+curl "analytics.getsocial.io/api/social/channels/facebook?from=2018-01-01&to=2018-01-31"
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -69,11 +69,11 @@ curl "analytics.getsocial.io/api/v1/channels/facebook?from=2018-01-01&to=2018-01
 This endpoint retrieves the channel information with total visits, shares and referrals between the two dates specified (inclusive).
 
 
-### HTTP Request
+#### HTTP Request
 
-`GET http://analytics.getsocial.io/api/v1/channels/channel_id`
+`GET http://analytics.getsocial.io/api/social/channels/channel_id`
 
-### Query Parameters
+#### Query Parameters
 
 Parameter  | Type     | Default      | Description
 ---------- | -------- | ------------ | --------
@@ -82,16 +82,16 @@ from       | `string` | -            | Date from which to start counting data
 to         | `string` | -            | Date to which to stop counting data
 
 
-### Returns
+#### Returns
 
 Channel with total visits, shares and referrals.
 
 
-## 5.3. Top Channel Users
+### 4.3. Top Channel Users
 
 
 ```shell
-curl "analytics.getsocial.io/api/v1/channels/facebook/users?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
+curl "analytics.getsocial.io/api/social/channels/facebook/users?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -117,11 +117,11 @@ curl "analytics.getsocial.io/api/v1/channels/facebook/users?from=2018-01-01&to=2
 This endpoint retrieves the top users for the channel, with total visits, shares and referrals between the two dates specified (inclusive).
 
 
-### HTTP Request
+#### HTTP Request
 
-`GET http://analytics.getsocial.io/api/v1/channels/channel_id/users`
+`GET http://analytics.getsocial.io/api/social/channels/channel_id/users`
 
-### Query Parameters
+#### Query Parameters
 
 Parameter  | Type     | Default      | Description
 ---------- | -------- | ------------ | --------
@@ -132,16 +132,16 @@ sort_by    | `string` | `shares`     | Criteria by which to sort users, can be `
 limit      | `number` | 10           | Max number of results to retrieve
 
 
-### Returns
+#### Returns
 
 List of channel top users with total visits, shares and referrals.
 
 
-## 5.4. Top Channel Stories
+### 4.4. Top Channel Stories
 
 
 ```shell
-curl "analytics.getsocial.io/api/v1/channels/facebook/stories?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
+curl "analytics.getsocial.io/api/social/channels/facebook/stories?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -167,11 +167,11 @@ curl "analytics.getsocial.io/api/v1/channels/facebook/stories?from=2018-01-01&to
 This endpoint retrieves the top stories for the channel, with total visits, shares and referrals between the two dates specified (inclusive).
 
 
-### HTTP Request
+#### HTTP Request
 
-`GET http://analytics.getsocial.io/api/v1/channels/channel_id/stories`
+`GET http://analytics.getsocial.io/api/social/channels/channel_id/stories`
 
-### Query Parameters
+#### Query Parameters
 
 Parameter  | Type     | Default      | Description
 ---------- | -------- | ------------ | --------
@@ -182,7 +182,7 @@ sort_by    | `string` | `shares`     | Criteria by which to sort stories, can be
 limit      | `number` | 10           | Max number of results to retrieve
 
 
-### Returns
+#### Returns
 
 List of channel top stories with total visits, shares and referrals.
 
