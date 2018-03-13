@@ -3,7 +3,7 @@
 ## 1. Total shares
 
 ```shell
-curl "analytics.getsocial.io/api/public/abcd1234/stories/efgh5678/counters/shares/total"
+curl "analytics.getsocial.io/api/public/stories/efgh5678/counters/total"
 ```
 
 > The above command returns a JSON structured like this:
@@ -21,13 +21,12 @@ This endpoint retrieves the total shares for a specific website story, for all-t
 
 ### HTTP Request
 
-`GET http://analytics.getsocial.io/api/public/site_id/stories/story_id/counters/shares/total`
+`GET http://analytics.getsocial.io/api/public/stories/story_id/counters/total`
 
 ### Query Parameters
 
 Parameter | Type     | Default      | Description
 --------- | -------- | ------------ | --------
-site_id   | `string` | -            | Website identifier
 story_id  | `string` | -            | Story identifier
 
 
