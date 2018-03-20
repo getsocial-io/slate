@@ -100,19 +100,19 @@ curl "analytics.getsocial.io/api/social/users/friend%40gmail.com/stories?from=20
 [
   {
     "identifier": "abcd1234",
-    "path": "/lyfestyle/article-z",
-    "title": "Article z",
     "visits": 5,
     "shares": 40,
-    "referrals": 150
+    "referrals": 150,
+    "title": "First Love",
+    "path": "/first-love/40100ff-0"
   },
   {
     "identifier": "abcd1235",
-    "path": "/lyfestyle/article-x",
-    "title": "Article x",
     "visits": 31,
     "shares": 9,
-    "referrals": 12
+    "referrals": 12,
+    "title": "Home of the Gentry",
+    "path": "/index.htm"
   }
 ]
 ```

@@ -153,13 +153,17 @@ curl "analytics.getsocial.io/api/social/channels/facebook/stories?from=2018-01-0
     "identifier": "abcd1234",
     "visits": 113,
     "shares": 21,
-    "referrals": 64
+    "referrals": 64,
+    "title": "The Same Old Story",
+    "path": "/"
   },
   {
     "identifier": "abcd1235",
     "visits": 81,
     "shares": 18,
-    "referrals": 72
+    "referrals": 72,
+    "title": "Oblomov",
+    "path": "/home"
   }
 ]
 ```
