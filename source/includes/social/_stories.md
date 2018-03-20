@@ -15,13 +15,17 @@ curl "analytics.getsocial.io/api/social/stories/top?from=2018-01-01&to=2018-01-3
     "identifier": "75dfd2a4fb79",
     "visits": 123,
     "shares": 40,
-    "referrals": 150
+    "referrals": 150,
+    "title": "The Precipice",
+    "path": "/"
   },
   {
     "id": "f15a173dd497",
     "visits": 190,
     "shares": 51,
-    "referrals": 40
+    "referrals": 40,
+    "title": "The Frigate Pallada",
+    "path": "/"
   }
 ]
 ```
@@ -116,7 +120,9 @@ curl "analytics.getsocial.io/api/social/stories/abcd1234?from=2018-01-01&to=2018
   "identifier": "abcd1234",
   "visits": 213,
   "shares": 40,
-  "referrals": 150
+  "referrals": 150,
+  "title": "De Petersburgse pest",
+  "path": "/"
 }
 ```
 
@@ -197,13 +203,17 @@ curl "analytics.getsocial.io/api/social/stories/abcd1234/users?from=2018-01-01&t
     "identifier": "friend@gmail.com",
     "visits": 113,
     "shares": 21,
-    "referrals": 64
+    "referrals": 64,
+    "title": "Ninfodora Ivánovna",
+    "path": "/goncharov/h/310/web.php"
   },
   {
     "identifier": "enemy@gmail.com",
     "visits": 81,
     "shares": 18,
-    "referrals": 72
+    "referrals": 72,
+    "title": "Fathers and Sons",
+    "path": "/page-12/1423523/fathers-and-sons-1"
   }
 ]
 ```
