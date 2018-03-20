@@ -1,0 +1,19 @@
+<h1 id='social-api'>Social API</h1><h2 id='1-authentication'>1. Authentication</h2>
+<blockquote>
+<p>To authorize, use this code:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"api_endpoint_here"</span>
+  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
+</code></pre>
+<blockquote>
+<p>Make sure to replace <code>abcdef0123abcdef0123</code> with your API key.</p>
+</blockquote>
+
+<p>GetSocial expects that an API key is included in all server requests, in a header as follows:</p>
+
+<p><code>Authorization: abcdef0123abcdef0123</code></p>
+
+<aside class="notice">
+You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
+</aside>
