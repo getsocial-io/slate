@@ -766,7 +766,38 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </tbody></table>
 <h4 id='returns-4'>Returns</h4>
 <p>Story with total shares and referrals.</p>
-<h3 id='3-5-top-story-users'>3.5. Top Story Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/stories/abcd1234/users?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span>
+<h3 id='3-5-fetch-story-identifier'>3.5. Fetch Story Identifier</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/stories/resolve_id/?path=/article-104"</span>
+  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"efgh5678"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves the story identifier that identifies a story, given it&#39;s path.</p>
+<h4 id='http-request-5'>HTTP Request</h4>
+<p><code>GET http://analytics.getsocial.io/api/social/stories/resolve_id</code></p>
+<h4 id='query-parameters-5'>Query Parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>path</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Story path</td>
+</tr>
+</tbody></table>
+<h4 id='returns-5'>Returns</h4>
+<p>Story identifier.</p>
+<h3 id='3-6-top-story-users'>3.6. Top Story Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/stories/abcd1234/users?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -792,9 +823,9 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves the top users for the story, with total visits, shares and referrals between the two dates specified (inclusive).</p>
-<h4 id='http-request-5'>HTTP Request</h4>
+<h4 id='http-request-6'>HTTP Request</h4>
 <p><code>GET http://analytics.getsocial.io/api/social/stories/story_id/users</code></p>
-<h4 id='query-parameters-5'>Query Parameters</h4>
+<h4 id='query-parameters-6'>Query Parameters</h4>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -834,9 +865,9 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 <td>Max number of results to retrieve</td>
 </tr>
 </tbody></table>
-<h4 id='returns-5'>Returns</h4>
+<h4 id='returns-6'>Returns</h4>
 <p>List of story top users with total visits, shares and referrals.</p>
-<h3 id='3-6-top-story-channels'>3.6. Top Story Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/stories/abcd1234/channels?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span>
+<h3 id='3-7-top-story-channels'>3.7. Top Story Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/stories/abcd1234/channels?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -858,9 +889,9 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves the top channels for the story, with total visits, shares and referrals between the two dates specified (inclusive).</p>
-<h4 id='http-request-6'>HTTP Request</h4>
+<h4 id='http-request-7'>HTTP Request</h4>
 <p><code>GET http://analytics.getsocial.io/api/social/stories/story_id/channels</code></p>
-<h4 id='query-parameters-6'>Query Parameters</h4>
+<h4 id='query-parameters-7'>Query Parameters</h4>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -900,7 +931,7 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 <td>Max number of results to retrieve</td>
 </tr>
 </tbody></table>
-<h4 id='returns-6'>Returns</h4>
+<h4 id='returns-7'>Returns</h4>
 <p>List of story top channels with total visits, shares and referrals.</p>
 <h2 id='4-channels'>4. Channels</h2><h3 id='4-1-top-channels'>4.1. Top Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/channels/top?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
