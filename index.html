@@ -777,6 +777,9 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves the story identifier that identifies a story, given it&#39;s path.</p>
+
+<p>The path must be clean of query arguments and hashtags, and should be CGI/HTML form encoded, although
+an attempt is made to understand misencoded paths. For example for the URL <code>http://example.com/path/site.htm?arg=1#top</code> the path should be <code>%2Fpath%2Fsite.htm</code>.</p>
 <h4 id='http-request-5'>HTTP Request</h4>
 <p><code>GET http://analytics.getsocial.io/api/social/stories/resolve_id</code></p>
 <h4 id='query-parameters-5'>Query Parameters</h4>
