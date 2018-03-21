@@ -187,7 +187,42 @@ to        | `string` | -            | Date to which to stop grouping data
 Story with total shares and referrals.
 
 
-### 3.5. Top Story Users
+### 3.5. Fetch Story Identifier
+
+
+```shell
+curl "analytics.getsocial.io/api/social/stories/resolve_id/?path=/article-104"
+  -H "Authorization: abcdef0123abcdef0123"
+```
+
+> The above command returns a JSON structured like this:
+
+```json
+{
+  "identifier": "efgh5678"
+}
+```
+
+This endpoint retrieves the story identifier that identifies a story, given it's path.
+
+
+#### HTTP Request
+
+`GET http://analytics.getsocial.io/api/social/stories/resolve_id`
+
+#### Query Parameters
+
+Parameter | Type     | Default | Description
+--------- | -------- | ------- | --------
+path      | `string` | -       | Story path
+
+
+#### Returns
+
+Story identifier.
+
+
+### 3.6. Top Story Users
 
 
 ```shell
@@ -240,7 +275,7 @@ limit     | `number` | 10           | Max number of results to retrieve
 
 List of story top users with total visits, shares and referrals.
 
-### 3.6. Top Story Channels
+### 3.7. Top Story Channels
 
 
 ```shell
