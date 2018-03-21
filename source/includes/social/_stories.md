@@ -205,6 +205,9 @@ curl "analytics.getsocial.io/api/social/stories/resolve_id/?path=/article-104"
 
 This endpoint retrieves the story identifier that identifies a story, given it's path.
 
+The path must be clean of query arguments and hashtags, and should be CGI/HTML form encoded, although
+an attempt is made to understand misencoded paths. For example for the URL `http://example.com/path/site.htm?arg=1#top` the path should be `%2Fpath%2Fsite.htm`.
+
 
 #### HTTP Request
 
