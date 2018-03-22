@@ -118,15 +118,17 @@ curl "analytics.getsocial.io/api/social/stories/abcd1234?from=2018-01-01&to=2018
 ```json
 {
   "identifier": "abcd1234",
+  "title": "De Petersburgse pest",
+  "path": "/",
   "visits": 213,
   "shares": 40,
   "referrals": 150,
-  "title": "De Petersburgse pest",
-  "path": "/"
+  "viral_score": 27.85,
+  "sharing_rate": 6.25
 }
 ```
 
-This endpoint retrieves the story information with total visits, shares and referrals between the two dates specified (inclusive).
+This endpoint retrieves the story information with total visits, shares, referrals, share rate and viral score between the two dates specified (inclusive).
 
 
 #### HTTP Request
@@ -147,47 +149,7 @@ to        | `string` | -            | Date to which to stop counting data
 Story with total visits, shares and referrals.
 
 
-### 3.4. Fetch Story (legacy)
-
-```shell
-curl "analytics.getsocial.io/api/stories/abcd1234?from=2018-01-01&to=2018-01-31"
-  -H "Authorization: abcdef0123abcdef0123"
-```
-
-> The above command returns a JSON structured like this:
-
-```json
-{
-  "identifier": "abcd1234",
-  "path": "/lyfestyle/article-z",
-  "title": "Article z",
-  "shares": 40,
-  "referrals": 150
-}
-```
-
-This endpoint retrieves the story with total shares and referrals between the two dates specified.
-
-
-#### HTTP Request
-
-`GET http://analytics.getsocial.io/api/stories/story_id`
-
-#### Query Parameters
-
-Parameter | Type     | Default      | Description
---------- | -------- | ------------ | ---------
-story_id  | `string` | -            | Story identifier
-from      | `string` | -            | Date from which to start grouping data
-to        | `string` | -            | Date to which to stop grouping data
-
-
-#### Returns
-
-Story with total shares and referrals.
-
-
-### 3.5. Fetch Story Identifier
+### 3.4. Fetch Story Identifier
 
 
 ```shell
@@ -225,7 +187,7 @@ path      | `string` | -       | Story path
 Story identifier.
 
 
-### 3.6. Top Story Users
+### 3.5. Top Story Users
 
 
 ```shell
@@ -278,7 +240,7 @@ limit     | `number` | 10           | Max number of results to retrieve
 
 List of story top users with total visits, shares and referrals.
 
-### 3.7. Top Story Channels
+### 3.6. Top Story Channels
 
 
 ```shell
