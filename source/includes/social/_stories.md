@@ -3,7 +3,7 @@
 ### 3.1. Top Stories
 
 ```shell
-curl "analytics.getsocial.io/api/social/stories/top?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
+curl "analytics.getsocial.io/api/social/stories/top?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -55,7 +55,7 @@ List of top stories with total visits, shares and referrals.
 ### 3.2. Top Stories in last 24-hours
 
 ```shell
-curl "analytics.getsocial.io/api/stories/top?limit=3&sort_by=referrals"
+curl "analytics.getsocial.io/api/stories/top?limit=3&sort_by=referrals" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -109,7 +109,7 @@ List of stories sorted by `sort_by`.
 ### 3.3. Fetch Story
 
 ```shell
-curl "analytics.getsocial.io/api/social/stories/abcd1234?from=2018-01-01&to=2018-01-31"
+curl "analytics.getsocial.io/api/social/stories/abcd1234?from=2018-01-01&to=2018-01-31" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -133,7 +133,7 @@ This endpoint retrieves the story information with total visits, shares, referra
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/social/stories/story_id`
+`GET http://analytics.getsocial.io/api/stories/story_id`
 
 #### Query Parameters
 
@@ -153,7 +153,7 @@ Story with total visits, shares and referrals.
 
 
 ```shell
-curl "analytics.getsocial.io/api/social/stories/resolve_id/?path=/article-104"
+curl "analytics.getsocial.io/api/social/stories/resolve_id/?path=/article-104" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -191,7 +191,7 @@ Story identifier.
 
 
 ```shell
-curl "analytics.getsocial.io/api/social/stories/abcd1234/users?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
+curl "analytics.getsocial.io/api/social/stories/abcd1234/users?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -244,7 +244,7 @@ List of story top users with total visits, shares and referrals.
 
 
 ```shell
-curl "analytics.getsocial.io/api/social/stories/abcd1234/channels?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
+curl "analytics.getsocial.io/api/social/stories/abcd1234/channels?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 

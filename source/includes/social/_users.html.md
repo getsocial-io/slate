@@ -3,7 +3,7 @@
 ### 2.1. Top Users
 
 ```shell
-curl "analytics.getsocial.io/api/social/users/top?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
+curl "analytics.getsocial.io/api/social/users/top?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -51,7 +51,7 @@ List of top users with total visits, shares and referrals.
 ### 2.2. Fetch User
 
 ```shell
-curl "analytics.getsocial.io/api/social/users/friend%40gmail.com?from=2018-01-01&to=2018-01-31"
+curl "analytics.getsocial.io/api/social/users/friend%40gmail.com?from=2018-01-01&to=2018-01-31" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -90,7 +90,7 @@ User with total visits, shares and referrals.
 ### 2.3. Top User Stories
 
 ```shell
-curl "analytics.getsocial.io/api/social/users/friend%40gmail.com/stories?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
+curl "analytics.getsocial.io/api/social/users/friend%40gmail.com/stories?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -143,7 +143,7 @@ List of user top stories with total visits, shares and referrals.
 ### 2.4. Top User Channels
 
 ```shell
-curl "analytics.getsocial.io/api/social/users/friend%40gmail.com/channels?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
+curl "analytics.getsocial.io/api/social/users/friend%40gmail.com/channels?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 

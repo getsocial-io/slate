@@ -3,7 +3,7 @@
 ### 4.1. Top Channels
 
 ```shell
-curl "analytics.getsocial.io/api/social/channels/top?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
+curl "analytics.getsocial.io/api/social/channels/top?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -51,7 +51,7 @@ List of top channels with total visits, shares and referrals.
 ### 4.2. Fetch Channel
 
 ```shell
-curl "analytics.getsocial.io/api/social/channels/facebook?from=2018-01-01&to=2018-01-31"
+curl "analytics.getsocial.io/api/social/channels/facebook?from=2018-01-01&to=2018-01-31" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -91,7 +91,7 @@ Channel with total visits, shares and referrals.
 
 
 ```shell
-curl "analytics.getsocial.io/api/social/channels/facebook/users?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
+curl "analytics.getsocial.io/api/social/channels/facebook/users?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -141,7 +141,7 @@ List of channel top users with total visits, shares and referrals.
 
 
 ```shell
-curl "analytics.getsocial.io/api/social/channels/facebook/stories?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2"
+curl "analytics.getsocial.io/api/social/channels/facebook/stories?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 

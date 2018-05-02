@@ -6,7 +6,7 @@
 
 ```shell
 # With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
+curl "api_endpoint_here" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
