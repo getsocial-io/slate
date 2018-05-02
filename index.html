@@ -294,7 +294,7 @@
 <p>To authorize, use this code:</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
+curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -308,7 +308,7 @@ curl <span class="s2">"api_endpoint_here"</span>
 <aside class="notice">
 You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </aside>
-<h2 id='2-users'>2. Users</h2><h3 id='2-1-top-users'>2.1. Top Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/users/top?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span>
+<h2 id='2-users'>2. Users</h2><h3 id='2-1-top-users'>2.1. Top Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/users/top?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -368,7 +368,7 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </tbody></table>
 <h4 id='returns'>Returns</h4>
 <p>List of top users with total visits, shares and referrals.</p>
-<h3 id='2-2-fetch-user'>2.2. Fetch User</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/users/friend%40gmail.com?from=2018-01-01&amp;to=2018-01-31"</span>
+<h3 id='2-2-fetch-user'>2.2. Fetch User</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/users/friend%40gmail.com?from=2018-01-01&amp;to=2018-01-31"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -414,7 +414,7 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </tbody></table>
 <h3 id='returns-2'>Returns</h3>
 <p>User with total visits, shares and referrals.</p>
-<h3 id='2-3-top-user-stories'>2.3. Top User Stories</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/users/friend%40gmail.com/stories?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span>
+<h3 id='2-3-top-user-stories'>2.3. Top User Stories</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/users/friend%40gmail.com/stories?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -484,7 +484,7 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </tbody></table>
 <h4 id='returns-3'>Returns</h4>
 <p>List of user top stories with total visits, shares and referrals.</p>
-<h3 id='2-4-top-user-channels'>2.4. Top User Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/users/friend%40gmail.com/channels?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span>
+<h3 id='2-4-top-user-channels'>2.4. Top User Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/users/friend%40gmail.com/channels?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -550,7 +550,7 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </tbody></table>
 <h4 id='returns-4'>Returns</h4>
 <p>List of user top channels with total visits, shares and referrals.</p>
-<h2 id='3-stories'>3. Stories</h2><h3 id='3-1-top-stories'>3.1. Top Stories</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/stories/top?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span>
+<h2 id='3-stories'>3. Stories</h2><h3 id='3-1-top-stories'>3.1. Top Stories</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/stories/top?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -614,7 +614,7 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </tbody></table>
 <h4 id='returns'>Returns</h4>
 <p>List of top stories with total visits, shares and referrals.</p>
-<h3 id='3-2-top-stories-in-last-24-hours'>3.2. Top Stories in last 24-hours</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/stories/top?limit=3&amp;sort_by=referrals"</span>
+<h3 id='3-2-top-stories-in-last-24-hours'>3.2. Top Stories in last 24-hours</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/stories/top?limit=3&amp;sort_by=referrals"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -671,7 +671,7 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </tbody></table>
 <h4 id='returns-2'>Returns</h4>
 <p>List of stories sorted by <code>sort_by</code>.</p>
-<h3 id='3-3-fetch-story'>3.3. Fetch Story</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/stories/abcd1234?from=2018-01-01&amp;to=2018-01-31"</span>
+<h3 id='3-3-fetch-story'>3.3. Fetch Story</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/stories/abcd1234?from=2018-01-01&amp;to=2018-01-31"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -690,7 +690,7 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </span></code></pre>
 <p>This endpoint retrieves the story information with total visits, shares, referrals, share rate and viral score between the two dates specified (inclusive).</p>
 <h4 id='http-request-3'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/social/stories/story_id</code></p>
+<p><code>GET http://analytics.getsocial.io/api/stories/story_id</code></p>
 <h4 id='query-parameters-3'>Query Parameters</h4>
 <table><thead>
 <tr>
@@ -721,7 +721,7 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </tbody></table>
 <h4 id='returns-3'>Returns</h4>
 <p>Story with total visits, shares and referrals.</p>
-<h3 id='3-4-fetch-story-identifier'>3.4. Fetch Story Identifier</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/stories/resolve_id/?path=/article-104"</span>
+<h3 id='3-4-fetch-story-identifier'>3.4. Fetch Story Identifier</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/stories/resolve_id/?path=/article-104"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -755,7 +755,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </tbody></table>
 <h4 id='returns-4'>Returns</h4>
 <p>Story identifier.</p>
-<h3 id='3-5-top-story-users'>3.5. Top Story Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/stories/abcd1234/users?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span>
+<h3 id='3-5-top-story-users'>3.5. Top Story Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/stories/abcd1234/users?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -825,7 +825,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </tbody></table>
 <h4 id='returns-5'>Returns</h4>
 <p>List of story top users with total visits, shares and referrals.</p>
-<h3 id='3-6-top-story-channels'>3.6. Top Story Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/stories/abcd1234/channels?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span>
+<h3 id='3-6-top-story-channels'>3.6. Top Story Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/stories/abcd1234/channels?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -891,7 +891,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </tbody></table>
 <h4 id='returns-6'>Returns</h4>
 <p>List of story top channels with total visits, shares and referrals.</p>
-<h2 id='4-channels'>4. Channels</h2><h3 id='4-1-top-channels'>4.1. Top Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/channels/top?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span>
+<h2 id='4-channels'>4. Channels</h2><h3 id='4-1-top-channels'>4.1. Top Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/channels/top?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -951,7 +951,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </tbody></table>
 <h4 id='returns'>Returns</h4>
 <p>List of top channels with total visits, shares and referrals.</p>
-<h3 id='4-2-fetch-channel'>4.2. Fetch Channel</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/channels/facebook?from=2018-01-01&amp;to=2018-01-31"</span>
+<h3 id='4-2-fetch-channel'>4.2. Fetch Channel</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/channels/facebook?from=2018-01-01&amp;to=2018-01-31"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -997,7 +997,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </tbody></table>
 <h4 id='returns-2'>Returns</h4>
 <p>Channel with total visits, shares and referrals.</p>
-<h3 id='4-3-top-channel-users'>4.3. Top Channel Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/channels/facebook/users?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span>
+<h3 id='4-3-top-channel-users'>4.3. Top Channel Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/channels/facebook/users?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -1063,7 +1063,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </tbody></table>
 <h4 id='returns-3'>Returns</h4>
 <p>List of channel top users with total visits, shares and referrals.</p>
-<h3 id='4-4-top-channel-stories'>4.4. Top Channel Stories</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/channels/facebook/stories?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span>
+<h3 id='4-4-top-channel-stories'>4.4. Top Channel Stories</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/channels/facebook/stories?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
