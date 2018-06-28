@@ -46,44 +46,6 @@ limit     | `number` | 10           | Max number of results to retrieve
 List of top channels with total shares and referrals.
 
 
-### 4.2. Fetch Channel
-
-```shell
-curl "analytics.getsocial.io/api/channels/facebook?from=2018-01-01&to=2018-01-31" \
-  -H "Authorization: abcdef0123abcdef0123"
-```
-
-> The above command returns a JSON structured like this:
-
-```json
-{
-  "identifier": "facebook",
-  "shares": 40,
-  "referrals": 150
-}
-```
-
-This endpoint retrieves the channel information with total shares and referrals between the two dates specified (inclusive).
-
-
-#### HTTP Request
-
-`GET http://analytics.getsocial.io/api/channels/channel_id`
-
-#### Query Parameters
-
-Parameter  | Type     | Default      | Description
----------- | -------- | ------------ | --------
-channel_id | `string` | -            | Channel identifier
-from       | `string` | -            | Date from which to start counting data
-to         | `string` | -            | Date to which to stop counting data
-
-
-#### Returns
-
-Channel with total shares and referrals.
-
-
 ### 4.3. Top Channel Users
 
 
