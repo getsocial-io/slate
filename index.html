@@ -828,72 +828,57 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </tbody></table>
 <h4 id='returns-5'>Returns</h4>
 <p>List of story top users with total visits, shares and referrals.</p>
-<h3 id='3-6-top-story-channels'>3.6. Top Story Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/stories/abcd1234/channels?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns a JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"facebook"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">113</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">64</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"twitter"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">81</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">72</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves the top channels for the story, with total visits, shares and referrals between the two dates specified (inclusive).</p>
-<h4 id='http-request-6'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/stories/story_id/channels</code></p>
-<h4 id='query-parameters-6'>Query Parameters</h4>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>story_id</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Story identifier</td>
-</tr>
-<tr>
-<td>from</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Date from which to start counting data</td>
-</tr>
-<tr>
-<td>to</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Date to which to stop counting data</td>
-</tr>
-<tr>
-<td>sort_by</td>
-<td><code>string</code></td>
-<td><code>shares</code></td>
-<td>Criteria by which to sort top channels, can be <code>visits</code>, <code>shares</code> or <code>referrals</code></td>
-</tr>
-<tr>
-<td>limit</td>
-<td><code>number</code></td>
-<td>10</td>
-<td>Max number of results to retrieve</td>
-</tr>
-</tbody></table>
-<h4 id='returns-6'>Returns</h4>
-<p>List of story top channels with total visits, shares and referrals.</p>
+
+<!--
+### 3.6. Top Story Channels
+
+
+```shell
+curl "analytics.getsocial.io/api/stories/abcd1234/channels?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
+  -H "Authorization: abcdef0123abcdef0123"
+```
+
+> The above command returns a JSON structured like this:
+
+```json
+[
+  {
+    "identifier": "facebook",
+    "visits": 113,
+    "shares": 21,
+    "referrals": 64
+  },
+  {
+    "identifier": "twitter",
+    "visits": 81,
+    "shares": 18,
+    "referrals": 72
+  }
+]
+```
+
+This endpoint retrieves the top channels for the story, with total visits, shares and referrals between the two dates specified (inclusive).
+
+
+#### HTTP Request
+
+`GET http://analytics.getsocial.io/api/stories/story_id/channels`
+
+#### Query Parameters
+
+Parameter | Type     | Default      | Description
+--------- | -------- | ------------ | --------
+story_id  | `string` | -            | Story identifier
+from      | `string` | -            | Date from which to start counting data
+to        | `string` | -            | Date to which to stop counting data
+sort_by   | `string` | `shares`     | Criteria by which to sort top channels, can be `visits`, `shares` or `referrals`
+limit     | `number` | 10           | Max number of results to retrieve
+
+
+#### Returns
+
+List of story top channels with total visits, shares and referrals.
+-->
 <h2 id='4-channels'>4. Channels</h2><h3 id='4-1-top-channels'>4.1. Top Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/top?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
