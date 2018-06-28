@@ -13,20 +13,18 @@ curl "analytics.getsocial.io/api/channels/top?from=2018-01-01&to=2018-01-3&sort_
 [
   {
     "identifier": "facebook",
-    "visits": 5,
     "shares": 40,
     "referrals": 150
   },
   {
     "identifier": "twitter",
-    "visits": 31,
     "shares": 9,
     "referrals": 12
   }
 ]
 ```
 
-This endpoint retrieves the overall top channels, with total visits, shares and referrals between the two dates specified (inclusive).
+This endpoint retrieves the overall top channels, with total shares and referrals between the two dates specified (inclusive).
 
 
 #### HTTP Request
@@ -39,13 +37,13 @@ Parameter | Type     | Default      | Description
 --------- | -------- | ------------ | --------
 from      | `string` | -            | Date from which to start counting data
 to        | `string` | -            | Date to which to stop counting data
-sort_by   | `string` | `shares`     | Criteria by which to sort channels, can be `visits`, `shares` or `referrals`
+sort_by   | `string` | `shares`     | Criteria by which to sort channels, can be `shares` or `referrals`
 limit     | `number` | 10           | Max number of results to retrieve
 
 
 #### Returns
 
-List of top channels with total visits, shares and referrals.
+List of top channels with total shares and referrals.
 
 
 ### 4.2. Fetch Channel
@@ -60,13 +58,12 @@ curl "analytics.getsocial.io/api/channels/facebook?from=2018-01-01&to=2018-01-31
 ```json
 {
   "identifier": "facebook",
-  "visits": 213,
   "shares": 40,
   "referrals": 150
 }
 ```
 
-This endpoint retrieves the channel information with total visits, shares and referrals between the two dates specified (inclusive).
+This endpoint retrieves the channel information with total shares and referrals between the two dates specified (inclusive).
 
 
 #### HTTP Request
@@ -84,7 +81,7 @@ to         | `string` | -            | Date to which to stop counting data
 
 #### Returns
 
-Channel with total visits, shares and referrals.
+Channel with total shares and referrals.
 
 
 ### 4.3. Top Channel Users
