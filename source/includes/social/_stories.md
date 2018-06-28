@@ -35,7 +35,7 @@ This endpoint retrieves the overall top stories, with total visits, shares and r
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/social/stories/top`
+`GET http://analytics.getsocial.io/api/stories/top`
 
 #### Query Parameters
 
@@ -112,7 +112,7 @@ List of stories sorted by `sort_by`.
 ### 3.3. Fetch Story
 
 ```shell
-curl "analytics.getsocial.io/api/social/stories/abcd1234?from=2018-01-01&to=2018-01-31" \
+curl "analytics.getsocial.io/api/stories/abcd1234?from=2018-01-01&to=2018-01-31" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -156,7 +156,7 @@ Story with total visits, shares and referrals.
 
 
 ```shell
-curl "analytics.getsocial.io/api/social/stories/resolve_id/?path=/article-104" \
+curl "analytics.getsocial.io/api/stories/resolve_id/?path=/article-104" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -176,7 +176,7 @@ an attempt is made to understand misencoded paths. For example for the URL `http
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/social/stories/resolve_id`
+`GET http://analytics.getsocial.io/api/stories/resolve_id`
 
 #### Query Parameters
 
