@@ -194,7 +194,7 @@ Story identifier.
 
 
 ```shell
-curl "analytics.getsocial.io/api/social/stories/abcd1234/users?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
+curl "analytics.getsocial.io/api/stories/abcd1234/users?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -226,7 +226,7 @@ This endpoint retrieves the top users for the story, with total visits, shares a
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/social/stories/story_id/users`
+`GET http://analytics.getsocial.io/api/stories/story_id/users`
 
 #### Query Parameters
 
@@ -247,7 +247,7 @@ List of story top users with total visits, shares and referrals.
 
 
 ```shell
-curl "analytics.getsocial.io/api/social/stories/abcd1234/channels?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
+curl "analytics.getsocial.io/api/stories/abcd1234/channels?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -275,7 +275,7 @@ This endpoint retrieves the top channels for the story, with total visits, share
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/social/stories/story_id/channels`
+`GET http://analytics.getsocial.io/api/stories/story_id/channels`
 
 #### Query Parameters
 

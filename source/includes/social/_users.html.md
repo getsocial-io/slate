@@ -3,7 +3,7 @@
 ### 2.1. Top Users
 
 ```shell
-curl "analytics.getsocial.io/api/social/users/top?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
+curl "analytics.getsocial.io/api/users/top?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -31,7 +31,7 @@ This endpoint retrieves the overall top users, with total visits, shares and ref
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/social/users/top`
+`GET http://analytics.getsocial.io/api/users/top`
 
 #### Query Parameters
 
@@ -51,7 +51,7 @@ List of top users with total visits, shares and referrals.
 ### 2.2. Fetch User
 
 ```shell
-curl "analytics.getsocial.io/api/social/users/friend%40gmail.com?from=2018-01-01&to=2018-01-31" \
+curl "analytics.getsocial.io/api/users/friend%40gmail.com?from=2018-01-01&to=2018-01-31" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -71,7 +71,7 @@ This endpoint retrieves the user information with total visits, shares and refer
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/social/users/user_id`
+`GET http://analytics.getsocial.io/api/users/user_id`
 
 #### Query Parameters
 
@@ -90,7 +90,7 @@ User with total visits, shares and referrals.
 ### 2.3. Top User Stories
 
 ```shell
-curl "analytics.getsocial.io/api/social/users/friend%40gmail.com/stories?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
+curl "analytics.getsocial.io/api/users/friend%40gmail.com/stories?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -122,7 +122,7 @@ This endpoint retrieves the top stories for the user, with total visits, shares 
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/social/users/channel_id/stories`
+`GET http://analytics.getsocial.io/api/users/channel_id/stories`
 
 #### Query Parameters
 
@@ -143,7 +143,7 @@ List of user top stories with total visits, shares and referrals.
 ### 2.4. Top User Channels
 
 ```shell
-curl "analytics.getsocial.io/api/social/users/friend%40gmail.com/channels?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
+curl "analytics.getsocial.io/api/users/friend%40gmail.com/channels?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -171,7 +171,7 @@ This endpoint retrieves the top channels for the user, with total visits, shares
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/social/users/channel_id/channels`
+`GET http://analytics.getsocial.io/api/users/channel_id/channels`
 
 #### Query Parameters
 
