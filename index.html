@@ -952,51 +952,6 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </tbody></table>
 <h4 id='returns'>Returns</h4>
 <p>List of top channels with total shares and referrals.</p>
-<h3 id='4-2-fetch-channel'>4.2. Fetch Channel</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/facebook?from=2018-01-01&amp;to=2018-01-31"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns a JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"facebook"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves the channel information with total shares and referrals between the two dates specified (inclusive).</p>
-<h4 id='http-request-2'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/channels/channel_id</code></p>
-<h4 id='query-parameters-2'>Query Parameters</h4>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>channel_id</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Channel identifier</td>
-</tr>
-<tr>
-<td>from</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Date from which to start counting data</td>
-</tr>
-<tr>
-<td>to</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Date to which to stop counting data</td>
-</tr>
-</tbody></table>
-<h4 id='returns-2'>Returns</h4>
-<p>Channel with total shares and referrals.</p>
 <h3 id='4-3-top-channel-users'>4.3. Top Channel Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/facebook/users?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
@@ -1019,9 +974,9 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves the top users for the channel, with total visits, shares and referrals between the two dates specified (inclusive).</p>
-<h4 id='http-request-3'>HTTP Request</h4>
+<h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET http://analytics.getsocial.io/api/channels/channel_id/users</code></p>
-<h4 id='query-parameters-3'>Query Parameters</h4>
+<h4 id='query-parameters-2'>Query Parameters</h4>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1061,7 +1016,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 <td>Max number of results to retrieve</td>
 </tr>
 </tbody></table>
-<h4 id='returns-3'>Returns</h4>
+<h4 id='returns-2'>Returns</h4>
 <p>List of channel top users with total visits, shares and referrals.</p>
 <h3 id='4-4-top-channel-stories'>4.4. Top Channel Stories</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/facebook/stories?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
@@ -1089,9 +1044,9 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves the top stories for the channel, with total visits, shares and referrals between the two dates specified (inclusive).</p>
-<h4 id='http-request-4'>HTTP Request</h4>
+<h4 id='http-request-3'>HTTP Request</h4>
 <p><code>GET http://analytics.getsocial.io/api/channels/channel_id/stories</code></p>
-<h4 id='query-parameters-4'>Query Parameters</h4>
+<h4 id='query-parameters-3'>Query Parameters</h4>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1131,7 +1086,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 <td>Max number of results to retrieve</td>
 </tr>
 </tbody></table>
-<h4 id='returns-4'>Returns</h4>
+<h4 id='returns-3'>Returns</h4>
 <p>List of channel top stories with total visits, shares and referrals.</p>
 <h1 id='errors'>Errors</h1>
 <p>The GetSocial API uses the following error codes:</p>
