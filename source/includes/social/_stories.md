@@ -20,7 +20,7 @@ curl "analytics.getsocial.io/api/stories/top?from=2018-01-01&to=2018-01-3&sort_b
     "path": "/"
   },
   {
-    "id": "f15a173dd497",
+    "identifier": "f15a173dd497",
     "visits": 190,
     "shares": 51,
     "referrals": 40,
@@ -72,7 +72,7 @@ curl "analytics.getsocial.io/api/stories/top?limit=3&sort_by=referrals" \
     "referrals": 150
   },
   {
-    "id": "f15a173dd497",
+    "identifier": "f15a173dd497",
     "path": "/sport/article-x",
     "title": "Article x",
     "visits": 60,
@@ -80,7 +80,7 @@ curl "analytics.getsocial.io/api/stories/top?limit=3&sort_by=referrals" \
     "referrals": 40
   },
   {
-    "id": "5f341a5d899a",
+    "identifier": "5f341a5d899a",
     "path": "/sport/article-y",
     "title": "Article y",
     "visits": 150,
