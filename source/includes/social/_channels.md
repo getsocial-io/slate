@@ -46,7 +46,7 @@ limit     | `number` | 10           | Max number of results to retrieve
 List of top channels with total shares and referrals.
 
 
-### 4.3. Top Channel Users
+### 4.2. Top Channel Users
 
 
 ```shell
@@ -95,8 +95,8 @@ limit      | `number` | 10           | Max number of results to retrieve
 
 List of channel top users with total visits, shares and referrals.
 
-
-### 4.4. Top Channel Stories
+<!--
+### 4.3. Top Channel Stories
 
 
 ```shell
@@ -148,4 +148,4 @@ limit      | `number` | 10           | Max number of results to retrieve
 #### Returns
 
 List of channel top stories with total visits, shares and referrals.
-
+-->
