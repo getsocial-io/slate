@@ -903,19 +903,17 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"facebook"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
     </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
     </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"twitter"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w">
     </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
     </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves the overall top channels, with total visits, shares and referrals between the two dates specified (inclusive).</p>
+<p>This endpoint retrieves the overall top channels, with total shares and referrals between the two dates specified (inclusive).</p>
 <h4 id='http-request'>HTTP Request</h4>
 <p><code>GET http://analytics.getsocial.io/api/channels/top</code></p>
 <h4 id='query-parameters'>Query Parameters</h4>
@@ -943,7 +941,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 <td>sort_by</td>
 <td><code>string</code></td>
 <td><code>shares</code></td>
-<td>Criteria by which to sort channels, can be <code>visits</code>, <code>shares</code> or <code>referrals</code></td>
+<td>Criteria by which to sort channels, can be <code>shares</code> or <code>referrals</code></td>
 </tr>
 <tr>
 <td>limit</td>
@@ -953,7 +951,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </tr>
 </tbody></table>
 <h4 id='returns'>Returns</h4>
-<p>List of top channels with total visits, shares and referrals.</p>
+<p>List of top channels with total shares and referrals.</p>
 <h3 id='4-2-fetch-channel'>4.2. Fetch Channel</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/facebook?from=2018-01-01&amp;to=2018-01-31"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
@@ -962,12 +960,11 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"facebook"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">213</span><span class="p">,</span><span class="w">
   </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
   </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves the channel information with total visits, shares and referrals between the two dates specified (inclusive).</p>
+<p>This endpoint retrieves the channel information with total shares and referrals between the two dates specified (inclusive).</p>
 <h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET http://analytics.getsocial.io/api/channels/channel_id</code></p>
 <h4 id='query-parameters-2'>Query Parameters</h4>
@@ -999,7 +996,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </tr>
 </tbody></table>
 <h4 id='returns-2'>Returns</h4>
-<p>Channel with total visits, shares and referrals.</p>
+<p>Channel with total shares and referrals.</p>
 <h3 id='4-3-top-channel-users'>4.3. Top Channel Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/facebook/users?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
