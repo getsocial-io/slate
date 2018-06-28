@@ -308,7 +308,7 @@ curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
 <aside class="notice">
 You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </aside>
-<h2 id='2-users'>2. Users</h2><h3 id='2-1-top-users'>2.1. Top Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/users/top?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
+<h2 id='2-users'>2. Users</h2><h3 id='2-1-top-users'>2.1. Top Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/users/top?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -331,7 +331,7 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </span></code></pre>
 <p>This endpoint retrieves the overall top users, with total visits, shares and referrals between the two dates specified (inclusive).</p>
 <h4 id='http-request'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/social/users/top</code></p>
+<p><code>GET http://analytics.getsocial.io/api/users/top</code></p>
 <h4 id='query-parameters'>Query Parameters</h4>
 <table><thead>
 <tr>
@@ -368,7 +368,7 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </tbody></table>
 <h4 id='returns'>Returns</h4>
 <p>List of top users with total visits, shares and referrals.</p>
-<h3 id='2-2-fetch-user'>2.2. Fetch User</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/users/friend%40gmail.com?from=2018-01-01&amp;to=2018-01-31"</span> <span class="se">\</span>
+<h3 id='2-2-fetch-user'>2.2. Fetch User</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/users/friend%40gmail.com?from=2018-01-01&amp;to=2018-01-31"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -383,7 +383,7 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </span></code></pre>
 <p>This endpoint retrieves the user information with total visits, shares and referrals between the two dates specified (inclusive).</p>
 <h4 id='http-request-2'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/social/users/user_id</code></p>
+<p><code>GET http://analytics.getsocial.io/api/users/user_id</code></p>
 <h4 id='query-parameters-2'>Query Parameters</h4>
 <table><thead>
 <tr>
@@ -414,7 +414,7 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </tbody></table>
 <h3 id='returns-2'>Returns</h3>
 <p>User with total visits, shares and referrals.</p>
-<h3 id='2-3-top-user-stories'>2.3. Top User Stories</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/users/friend%40gmail.com/stories?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
+<h3 id='2-3-top-user-stories'>2.3. Top User Stories</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/users/friend%40gmail.com/stories?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -441,7 +441,7 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </span></code></pre>
 <p>This endpoint retrieves the top stories for the user, with total visits, shares and referrals between the two dates specified (inclusive).</p>
 <h4 id='http-request-3'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/social/users/channel_id/stories</code></p>
+<p><code>GET http://analytics.getsocial.io/api/users/channel_id/stories</code></p>
 <h4 id='query-parameters-3'>Query Parameters</h4>
 <table><thead>
 <tr>
@@ -484,7 +484,7 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </tbody></table>
 <h4 id='returns-3'>Returns</h4>
 <p>List of user top stories with total visits, shares and referrals.</p>
-<h3 id='2-4-top-user-channels'>2.4. Top User Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/users/friend%40gmail.com/channels?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
+<h3 id='2-4-top-user-channels'>2.4. Top User Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/users/friend%40gmail.com/channels?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -507,7 +507,7 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </span></code></pre>
 <p>This endpoint retrieves the top channels for the user, with total visits, shares and referrals between the two dates specified (inclusive).</p>
 <h4 id='http-request-4'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/social/users/channel_id/channels</code></p>
+<p><code>GET http://analytics.getsocial.io/api/users/channel_id/channels</code></p>
 <h4 id='query-parameters-4'>Query Parameters</h4>
 <table><thead>
 <tr>
@@ -758,7 +758,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </tbody></table>
 <h4 id='returns-4'>Returns</h4>
 <p>Story identifier.</p>
-<h3 id='3-5-top-story-users'>3.5. Top Story Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/stories/abcd1234/users?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
+<h3 id='3-5-top-story-users'>3.5. Top Story Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/stories/abcd1234/users?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -785,7 +785,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </span></code></pre>
 <p>This endpoint retrieves the top users for the story, with total visits, shares and referrals between the two dates specified (inclusive).</p>
 <h4 id='http-request-5'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/social/stories/story_id/users</code></p>
+<p><code>GET http://analytics.getsocial.io/api/stories/story_id/users</code></p>
 <h4 id='query-parameters-5'>Query Parameters</h4>
 <table><thead>
 <tr>
@@ -828,7 +828,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </tbody></table>
 <h4 id='returns-5'>Returns</h4>
 <p>List of story top users with total visits, shares and referrals.</p>
-<h3 id='3-6-top-story-channels'>3.6. Top Story Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/stories/abcd1234/channels?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
+<h3 id='3-6-top-story-channels'>3.6. Top Story Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/stories/abcd1234/channels?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -851,7 +851,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </span></code></pre>
 <p>This endpoint retrieves the top channels for the story, with total visits, shares and referrals between the two dates specified (inclusive).</p>
 <h4 id='http-request-6'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/social/stories/story_id/channels</code></p>
+<p><code>GET http://analytics.getsocial.io/api/stories/story_id/channels</code></p>
 <h4 id='query-parameters-6'>Query Parameters</h4>
 <table><thead>
 <tr>
@@ -894,7 +894,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </tbody></table>
 <h4 id='returns-6'>Returns</h4>
 <p>List of story top channels with total visits, shares and referrals.</p>
-<h2 id='4-channels'>4. Channels</h2><h3 id='4-1-top-channels'>4.1. Top Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/channels/top?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
+<h2 id='4-channels'>4. Channels</h2><h3 id='4-1-top-channels'>4.1. Top Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/top?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -917,7 +917,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </span></code></pre>
 <p>This endpoint retrieves the overall top channels, with total visits, shares and referrals between the two dates specified (inclusive).</p>
 <h4 id='http-request'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/social/channels/top</code></p>
+<p><code>GET http://analytics.getsocial.io/api/channels/top</code></p>
 <h4 id='query-parameters'>Query Parameters</h4>
 <table><thead>
 <tr>
@@ -954,7 +954,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </tbody></table>
 <h4 id='returns'>Returns</h4>
 <p>List of top channels with total visits, shares and referrals.</p>
-<h3 id='4-2-fetch-channel'>4.2. Fetch Channel</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/channels/facebook?from=2018-01-01&amp;to=2018-01-31"</span> <span class="se">\</span>
+<h3 id='4-2-fetch-channel'>4.2. Fetch Channel</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/facebook?from=2018-01-01&amp;to=2018-01-31"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -969,7 +969,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </span></code></pre>
 <p>This endpoint retrieves the channel information with total visits, shares and referrals between the two dates specified (inclusive).</p>
 <h4 id='http-request-2'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/social/channels/channel_id</code></p>
+<p><code>GET http://analytics.getsocial.io/api/channels/channel_id</code></p>
 <h4 id='query-parameters-2'>Query Parameters</h4>
 <table><thead>
 <tr>
@@ -1000,7 +1000,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </tbody></table>
 <h4 id='returns-2'>Returns</h4>
 <p>Channel with total visits, shares and referrals.</p>
-<h3 id='4-3-top-channel-users'>4.3. Top Channel Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/channels/facebook/users?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
+<h3 id='4-3-top-channel-users'>4.3. Top Channel Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/facebook/users?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -1023,7 +1023,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </span></code></pre>
 <p>This endpoint retrieves the top users for the channel, with total visits, shares and referrals between the two dates specified (inclusive).</p>
 <h4 id='http-request-3'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/social/channels/channel_id/users</code></p>
+<p><code>GET http://analytics.getsocial.io/api/channels/channel_id/users</code></p>
 <h4 id='query-parameters-3'>Query Parameters</h4>
 <table><thead>
 <tr>
@@ -1066,7 +1066,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </tbody></table>
 <h4 id='returns-3'>Returns</h4>
 <p>List of channel top users with total visits, shares and referrals.</p>
-<h3 id='4-4-top-channel-stories'>4.4. Top Channel Stories</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/social/channels/facebook/stories?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
+<h3 id='4-4-top-channel-stories'>4.4. Top Channel Stories</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/facebook/stories?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -1093,7 +1093,7 @@ an attempt is made to understand misencoded paths. For example for the URL <code
 </span></code></pre>
 <p>This endpoint retrieves the top stories for the channel, with total visits, shares and referrals between the two dates specified (inclusive).</p>
 <h4 id='http-request-4'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/social/channels/channel_id/stories</code></p>
+<p><code>GET http://analytics.getsocial.io/api/channels/channel_id/stories</code></p>
 <h4 id='query-parameters-4'>Query Parameters</h4>
 <table><thead>
 <tr>
