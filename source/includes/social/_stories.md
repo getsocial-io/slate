@@ -243,6 +243,7 @@ limit     | `number` | 10           | Max number of results to retrieve
 
 List of story top users with total visits, shares and referrals.
 
+<!--
 ### 3.6. Top Story Channels
 
 
@@ -291,3 +292,4 @@ limit     | `number` | 10           | Max number of results to retrieve
 #### Returns
 
 List of story top channels with total visits, shares and referrals.
+-->
