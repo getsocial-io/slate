@@ -3,7 +3,7 @@
 ### 3.1. Top Stories
 
 ```shell
-curl "analytics.getsocial.io/api/social/stories/top?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
+curl "analytics.getsocial.io/api/stories/top?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -67,6 +67,7 @@ curl "analytics.getsocial.io/api/stories/top?limit=3&sort_by=referrals" \
     "identifier": "75dfd2a4fb79",
     "path": "/lyfestyle/article-z",
     "title": "Article z",
+    "visits": 100,
     "shares": 40,
     "referrals": 150
   },
@@ -74,6 +75,7 @@ curl "analytics.getsocial.io/api/stories/top?limit=3&sort_by=referrals" \
     "id": "f15a173dd497",
     "path": "/sport/article-x",
     "title": "Article x",
+    "visits": 60,
     "shares": 51,
     "referrals": 40
   },
@@ -81,13 +83,14 @@ curl "analytics.getsocial.io/api/stories/top?limit=3&sort_by=referrals" \
     "id": "5f341a5d899a",
     "path": "/sport/article-y",
     "title": "Article y",
+    "visits": 150,
     "shares": 100,
     "referrals": 122
   }
 ]
 ```
 
-This endpoint retrieves the top stories in the last 24 hours sorted by a specific metric. It can be used to retrieve the most shared or most referred stories.
+This endpoint retrieves the top stories in the last 24 hours sorted by a specific metric. It can be used to retrieve the most shared, most referred or most visited stories.
 
 #### HTTP Request
 
@@ -98,7 +101,7 @@ This endpoint retrieves the top stories in the last 24 hours sorted by a specifi
 Parameter | Type     | Default | Description
 --------- | -------- | --------- | --------
 limit     | `number` | 10 | Number of stories to be retrieved
-sort_by   | `string` | shares | Metric used to sort stories. Accepted values are `shares` and `referrals`
+sort_by   | `string` | shares | Metric used to sort stories. Accepted values are `visits`, `shares` and `referrals`
 
 
 #### Returns
