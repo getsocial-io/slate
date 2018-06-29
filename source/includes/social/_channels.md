@@ -79,7 +79,7 @@ This endpoint retrieves the top channels in the last 24 hours sorted by a specif
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/stories/top`
+`GET http://analytics.getsocial.io/api/channels/top`
 
 #### Query Parameters
 
