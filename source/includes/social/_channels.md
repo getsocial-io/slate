@@ -12,12 +12,12 @@ curl "analytics.getsocial.io/api/channels/top?from=2018-01-01&to=2018-01-3&sort_
 ```json
 [
   {
-    "identifier": "facebook",
+    "identifier": "Facebook",
     "shares": 40,
     "referrals": 150
   },
   {
-    "identifier": "twitter",
+    "identifier": "Twitter",
     "shares": 9,
     "referrals": 12
   }
@@ -46,7 +46,55 @@ limit     | `number` | 10           | Max number of results to retrieve
 List of top channels with total shares and referrals.
 
 
-### 4.2. Top Channel Users
+### 4.2. Top Channels in last 24-hours
+
+```shell
+curl "analytics.getsocial.io/api/channels/top?limit=3&sort_by=referrals" \
+  -H "Authorization: abcdef0123abcdef0123"
+```
+
+> The above command returns a JSON structured like this:
+
+```json
+[
+  {
+    "identifier": "Facebook",
+    "shares": 40,
+    "referrals": 150
+  },
+  {
+    "identifier": "Twitter",
+    "shares": 10,
+    "referrals": 80
+  },
+  {
+    "identifier": "CopyPaste",
+    "shares": 10,
+    "referrals": 30
+  }
+]
+```
+
+This endpoint retrieves the top stories in the last 24 hours sorted by a specific metric. It can be used to retrieve the most shared, most referred or most visited stories.
+
+#### HTTP Request
+
+`GET http://analytics.getsocial.io/api/stories/top`
+
+#### Query Parameters
+
+Parameter | Type     | Default | Description
+--------- | -------- | --------- | --------
+limit     | `number` | 10 | Number of channels to be retrieved
+sort_by   | `string` | shares | Metric used to sort channels. Accepted values are `shares` and `referrals`
+
+
+#### Returns
+
+List of channels sorted by `sort_by`.
+
+
+### 4.3. Top Channel Users
 
 
 ```shell
@@ -96,7 +144,7 @@ limit      | `number` | 10           | Max number of results to retrieve
 List of channel top users with total visits, shares and referrals.
 
 <!--
-### 4.3. Top Channel Stories
+### 4.4. Top Channel Stories
 
 
 ```shell
