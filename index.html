@@ -887,12 +887,12 @@ List of story top channels with total visits, shares and referrals.
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"facebook"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Facebook"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
     </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"twitter"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Twitter"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
     </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="w">
   </span><span class="p">}</span><span class="w">
@@ -937,7 +937,58 @@ List of story top channels with total visits, shares and referrals.
 </tbody></table>
 <h4 id='returns'>Returns</h4>
 <p>List of top channels with total shares and referrals.</p>
-<h3 id='4-2-top-channel-users'>4.2. Top Channel Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/facebook/users?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
+<h3 id='4-2-top-channels-in-last-24-hours'>4.2. Top Channels in last 24-hours</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/top?limit=3&amp;sort_by=referrals"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Facebook"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Twitter"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CopyPaste"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves the top stories in the last 24 hours sorted by a specific metric. It can be used to retrieve the most shared, most referred or most visited stories.</p>
+<h4 id='http-request-2'>HTTP Request</h4>
+<p><code>GET http://analytics.getsocial.io/api/stories/top</code></p>
+<h4 id='query-parameters-2'>Query Parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td><code>number</code></td>
+<td>10</td>
+<td>Number of channels to be retrieved</td>
+</tr>
+<tr>
+<td>sort_by</td>
+<td><code>string</code></td>
+<td>shares</td>
+<td>Metric used to sort channels. Accepted values are <code>shares</code> and <code>referrals</code></td>
+</tr>
+</tbody></table>
+<h4 id='returns-2'>Returns</h4>
+<p>List of channels sorted by <code>sort_by</code>.</p>
+<h3 id='4-3-top-channel-users'>4.3. Top Channel Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/facebook/users?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -959,9 +1010,9 @@ List of story top channels with total visits, shares and referrals.
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves the top users for the channel, with total visits, shares and referrals between the two dates specified (inclusive).</p>
-<h4 id='http-request-2'>HTTP Request</h4>
+<h4 id='http-request-3'>HTTP Request</h4>
 <p><code>GET http://analytics.getsocial.io/api/channels/channel_id/users</code></p>
-<h4 id='query-parameters-2'>Query Parameters</h4>
+<h4 id='query-parameters-3'>Query Parameters</h4>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1001,11 +1052,11 @@ List of story top channels with total visits, shares and referrals.
 <td>Max number of results to retrieve</td>
 </tr>
 </tbody></table>
-<h4 id='returns-2'>Returns</h4>
+<h4 id='returns-3'>Returns</h4>
 <p>List of channel top users with total visits, shares and referrals.</p>
 
 <!--
-### 4.3. Top Channel Stories
+### 4.4. Top Channel Stories
 
 
 ```shell
