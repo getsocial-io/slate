@@ -75,7 +75,7 @@ curl "analytics.getsocial.io/api/channels/top?limit=3&sort_by=referrals" \
 ]
 ```
 
-This endpoint retrieves the top stories in the last 24 hours sorted by a specific metric. It can be used to retrieve the most shared, most referred or most visited stories.
+This endpoint retrieves the top channels in the last 24 hours sorted by a specific metric. It can be used to retrieve the most shared and most referred channels.
 
 #### HTTP Request
 
