@@ -223,27 +223,22 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#public-api" class="toc-h1 toc-link" data-title="Public API">Public API</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#1-total-shares" class="toc-h2 toc-link" data-title="1. Total shares">1. Total shares</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
             <a href="#social-api" class="toc-h1 toc-link" data-title="Social API">Social API</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#1-authentication" class="toc-h2 toc-link" data-title="1. Authentication">1. Authentication</a>
                   </li>
                   <li>
-                    <a href="#2-users" class="toc-h2 toc-link" data-title="2. Users">2. Users</a>
+                    <a href="#2-sites" class="toc-h2 toc-link" data-title="2. Sites">2. Sites</a>
                   </li>
                   <li>
                     <a href="#3-stories" class="toc-h2 toc-link" data-title="3. Stories">3. Stories</a>
                   </li>
                   <li>
-                    <a href="#4-channels" class="toc-h2 toc-link" data-title="4. Channels">4. Channels</a>
+                    <a href="#4-users" class="toc-h2 toc-link" data-title="4. Users">4. Users</a>
+                  </li>
+                  <li>
+                    <a href="#5-channels" class="toc-h2 toc-link" data-title="5. Channels">5. Channels</a>
                   </li>
               </ul>
           </li>
@@ -257,38 +252,6 @@
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
 <p>Welcome to the GetSocial API! You can use it to access GetSocial API endpoints, which provide data access to sharing statistics of news articles in public social networks &amp; private messaging apps.</p>
-<h1 id='public-api'>Public API</h1><h2 id='1-total-shares'>1. Total shares</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/public/stories/efgh5678/counters/total"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns a JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"facebook"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"twitter"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"addressbar"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves the total shares for a specific website story, for all-time.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://analytics.getsocial.io/api/public/stories/story_id/counters/total</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>story_id</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Story identifier</td>
-</tr>
-</tbody></table>
-<h3 id='returns'>Returns</h3>
-<p>Object with total number of shares per channel present.</p>
 <h1 id='social-api'>Social API</h1><h2 id='1-authentication'>1. Authentication</h2>
 <blockquote>
 <p>To authorize, use this code:</p>
@@ -308,30 +271,22 @@ curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
 <aside class="notice">
 You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </aside>
-<h2 id='2-users'>2. Users</h2><h3 id='2-1-top-users'>2.1. Top Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/users/top?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
+<h2 id='2-sites'>2. Sites</h2><h3 id='2-1-fetch-site'>2.1. Fetch Site</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/sites/b5b75e?from=2018-01-01&amp;to=2018-01-05"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns a JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"friend@gmail.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"enemy@gmail.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">410275</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">50749</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">61051</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"sharing_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.37</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves the overall top users, with total visits, shares and referrals between the two dates specified (inclusive).</p>
+<p>This endpoint retrieves analytics data for a specific site observed between two dates (inclusive).</p>
 <h4 id='http-request'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/users/top</code></p>
+<p><code>GET http://analytics.getsocial.io/api/sites/site_id</code></p>
 <h4 id='query-parameters'>Query Parameters</h4>
 <table><thead>
 <tr>
@@ -342,6 +297,12 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </tr>
 </thead><tbody>
 <tr>
+<td>site_id</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Site identifier</td>
+</tr>
+<tr>
 <td>from</td>
 <td><code>string</code></td>
 <td>-</td>
@@ -352,204 +313,10 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 <td><code>string</code></td>
 <td>-</td>
 <td>Date to which to stop counting data</td>
-</tr>
-<tr>
-<td>sort_by</td>
-<td><code>string</code></td>
-<td><code>shares</code></td>
-<td>Criteria by which to sort users, can be <code>visits</code>, <code>shares</code> or <code>referrals</code></td>
-</tr>
-<tr>
-<td>limit</td>
-<td><code>number</code></td>
-<td>10</td>
-<td>Max number of results to retrieve</td>
 </tr>
 </tbody></table>
 <h4 id='returns'>Returns</h4>
-<p>List of top users with total visits, shares and referrals.</p>
-<h3 id='2-2-fetch-user'>2.2. Fetch User</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/users/friend%40gmail.com?from=2018-01-01&amp;to=2018-01-31"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns a JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"friend@gmail.com"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">213</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves the user information with total visits, shares and referrals between the two dates specified (inclusive).</p>
-<h4 id='http-request-2'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/users/user_id</code></p>
-<h4 id='query-parameters-2'>Query Parameters</h4>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>user_id</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>User identifier</td>
-</tr>
-<tr>
-<td>from</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Date from which to start counting data</td>
-</tr>
-<tr>
-<td>to</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Date to which to stop counting data</td>
-</tr>
-</tbody></table>
-<h3 id='returns-2'>Returns</h3>
-<p>User with total visits, shares and referrals.</p>
-<h3 id='2-3-top-user-stories'>2.3. Top User Stories</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/users/friend%40gmail.com/stories?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns a JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abcd1234"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"First Love"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/first-love/40100ff-0"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abcd1235"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Home of the Gentry"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/index.htm"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves the top stories for the user, with total visits, shares and referrals between the two dates specified (inclusive).</p>
-<h4 id='http-request-3'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/users/channel_id/stories</code></p>
-<h4 id='query-parameters-3'>Query Parameters</h4>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>user_id</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>User identifier</td>
-</tr>
-<tr>
-<td>from</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Date from which to start counting data</td>
-</tr>
-<tr>
-<td>to</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Date to which to stop counting data</td>
-</tr>
-<tr>
-<td>sort_by</td>
-<td><code>string</code></td>
-<td><code>shares</code></td>
-<td>Criteria by which to sort stories, can be <code>visits</code>, <code>shares</code> or <code>referrals</code></td>
-</tr>
-<tr>
-<td>limit</td>
-<td><code>number</code></td>
-<td>10</td>
-<td>Max number of results to retrieve</td>
-</tr>
-</tbody></table>
-<h4 id='returns-3'>Returns</h4>
-<p>List of user top stories with total visits, shares and referrals.</p>
-<h3 id='2-4-top-user-channels'>2.4. Top User Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/users/friend%40gmail.com/channels?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns a JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"facebook"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">81</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"twitter"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves the top channels for the user, with total visits, shares and referrals between the two dates specified (inclusive).</p>
-<h4 id='http-request-4'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/users/channel_id/channels</code></p>
-<h4 id='query-parameters-4'>Query Parameters</h4>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>user_id</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>User identifier</td>
-</tr>
-<tr>
-<td>from</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Date from which to start counting data</td>
-</tr>
-<tr>
-<td>to</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Date to which to stop counting data</td>
-</tr>
-<tr>
-<td>sort_by</td>
-<td><code>string</code></td>
-<td><code>shares</code></td>
-<td>Criteria by which to sort channels, can be <code>visits</code>, <code>shares</code> or <code>referrals</code></td>
-</tr>
-<tr>
-<td>limit</td>
-<td><code>number</code></td>
-<td>10</td>
-<td>Max number of results to retrieve</td>
-</tr>
-</tbody></table>
-<h4 id='returns-4'>Returns</h4>
-<p>List of user top channels with total visits, shares and referrals.</p>
+<p>Total visits, shares, referrals and sharing_rate observed for the site during the requested period.</p>
 <h2 id='3-stories'>3. Stories</h2><h3 id='3-1-top-stories'>3.1. Top Stories</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/stories/top?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
@@ -879,7 +646,249 @@ limit     | `number` | 10           | Max number of results to retrieve
 
 List of story top channels with total visits, shares and referrals.
 -->
-<h2 id='4-channels'>4. Channels</h2><h3 id='4-1-top-channels'>4.1. Top Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/top?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
+<h2 id='4-users'>4. Users</h2><h3 id='4-1-top-users'>4.1. Top Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/users/top?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"friend@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"enemy@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves the overall top users, with total visits, shares and referrals between the two dates specified (inclusive).</p>
+<h4 id='http-request'>HTTP Request</h4>
+<p><code>GET http://analytics.getsocial.io/api/users/top</code></p>
+<h4 id='query-parameters'>Query Parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>from</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date from which to start counting data</td>
+</tr>
+<tr>
+<td>to</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date to which to stop counting data</td>
+</tr>
+<tr>
+<td>sort_by</td>
+<td><code>string</code></td>
+<td><code>shares</code></td>
+<td>Criteria by which to sort users, can be <code>visits</code>, <code>shares</code> or <code>referrals</code></td>
+</tr>
+<tr>
+<td>limit</td>
+<td><code>number</code></td>
+<td>10</td>
+<td>Max number of results to retrieve</td>
+</tr>
+</tbody></table>
+<h4 id='returns'>Returns</h4>
+<p>List of top users with total visits, shares and referrals.</p>
+<h3 id='4-2-fetch-user'>4.2. Fetch User</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/users/friend%40gmail.com?from=2018-01-01&amp;to=2018-01-31"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"friend@gmail.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">213</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves the user information with total visits, shares and referrals between the two dates specified (inclusive).</p>
+<h4 id='http-request-2'>HTTP Request</h4>
+<p><code>GET http://analytics.getsocial.io/api/users/user_id</code></p>
+<h4 id='query-parameters-2'>Query Parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_id</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>User identifier</td>
+</tr>
+<tr>
+<td>from</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date from which to start counting data</td>
+</tr>
+<tr>
+<td>to</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date to which to stop counting data</td>
+</tr>
+</tbody></table>
+<h3 id='returns-2'>Returns</h3>
+<p>User with total visits, shares and referrals.</p>
+<h3 id='4-3-top-user-stories'>4.3. Top User Stories</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/users/friend%40gmail.com/stories?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abcd1234"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"First Love"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/first-love/40100ff-0"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abcd1235"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Home of the Gentry"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/index.htm"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves the top stories for the user, with total visits, shares and referrals between the two dates specified (inclusive).</p>
+<h4 id='http-request-3'>HTTP Request</h4>
+<p><code>GET http://analytics.getsocial.io/api/users/channel_id/stories</code></p>
+<h4 id='query-parameters-3'>Query Parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_id</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>User identifier</td>
+</tr>
+<tr>
+<td>from</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date from which to start counting data</td>
+</tr>
+<tr>
+<td>to</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date to which to stop counting data</td>
+</tr>
+<tr>
+<td>sort_by</td>
+<td><code>string</code></td>
+<td><code>shares</code></td>
+<td>Criteria by which to sort stories, can be <code>visits</code>, <code>shares</code> or <code>referrals</code></td>
+</tr>
+<tr>
+<td>limit</td>
+<td><code>number</code></td>
+<td>10</td>
+<td>Max number of results to retrieve</td>
+</tr>
+</tbody></table>
+<h4 id='returns-3'>Returns</h4>
+<p>List of user top stories with total visits, shares and referrals.</p>
+<h3 id='4-4-top-user-channels'>4.4. Top User Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/users/friend%40gmail.com/channels?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"facebook"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">81</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"twitter"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves the top channels for the user, with total visits, shares and referrals between the two dates specified (inclusive).</p>
+<h4 id='http-request-4'>HTTP Request</h4>
+<p><code>GET http://analytics.getsocial.io/api/users/channel_id/channels</code></p>
+<h4 id='query-parameters-4'>Query Parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_id</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>User identifier</td>
+</tr>
+<tr>
+<td>from</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date from which to start counting data</td>
+</tr>
+<tr>
+<td>to</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date to which to stop counting data</td>
+</tr>
+<tr>
+<td>sort_by</td>
+<td><code>string</code></td>
+<td><code>shares</code></td>
+<td>Criteria by which to sort channels, can be <code>visits</code>, <code>shares</code> or <code>referrals</code></td>
+</tr>
+<tr>
+<td>limit</td>
+<td><code>number</code></td>
+<td>10</td>
+<td>Max number of results to retrieve</td>
+</tr>
+</tbody></table>
+<h4 id='returns-4'>Returns</h4>
+<p>List of user top channels with total visits, shares and referrals.</p>
+<h2 id='5-channels'>5. Channels</h2><h3 id='5-1-top-channels'>5.1. Top Channels</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/top?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -937,7 +946,7 @@ List of story top channels with total visits, shares and referrals.
 </tbody></table>
 <h4 id='returns'>Returns</h4>
 <p>List of top channels with total shares and referrals.</p>
-<h3 id='4-2-top-channels-in-last-24-hours'>4.2. Top Channels in last 24-hours</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/top?limit=3&amp;sort_by=referrals"</span> <span class="se">\</span>
+<h3 id='5-2-top-channels-in-last-24-hours'>5.2. Top Channels in last 24-hours</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/top?limit=3&amp;sort_by=referrals"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -988,7 +997,7 @@ List of story top channels with total visits, shares and referrals.
 </tbody></table>
 <h4 id='returns-2'>Returns</h4>
 <p>List of channels sorted by <code>sort_by</code>.</p>
-<h3 id='4-3-top-channel-users'>4.3. Top Channel Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/facebook/users?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
+<h3 id='5-3-top-channel-users'>5.3. Top Channel Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/facebook/users?from=2018-01-01&amp;to=2018-01-3&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -1056,7 +1065,7 @@ List of story top channels with total visits, shares and referrals.
 <p>List of channel top users with total visits, shares and referrals.</p>
 
 <!--
-### 4.4. Top Channel Stories
+### 5.5. Top Channel Stories
 
 
 ```shell
