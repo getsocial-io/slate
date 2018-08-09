@@ -1,0 +1,39 @@
+## 2. Sites
+
+### 2.1. Fetch Site
+
+```shell
+curl "analytics.getsocial.io/api/sites/b5b75e?from=2018-01-01&to=2018-01-05" \
+  -H "Authorization: abcdef0123abcdef0123"
+```
+
+> The above command returns a JSON structured like this:
+
+```json
+{
+  "visits": 410275,
+  "shares": 50749,
+  "referrals": 61051,
+  "sharing_rate": 12.37
+}
+```
+
+This endpoint retrieves analytics data for a specific site observed between two dates (inclusive).
+
+
+#### HTTP Request
+
+`GET http://analytics.getsocial.io/api/sites/site_id`
+
+#### Query Parameters
+
+Parameter | Type     | Default      | Description
+--------- | -------- | ------------ | --------
+site_id   | `string` | -            | Site identifier
+from      | `string` | -            | Date from which to start counting data
+to        | `string` | -            | Date to which to stop counting data
+
+
+#### Returns
+
+Total visits, shares, referrals and sharing_rate observed for the site during the requested period.

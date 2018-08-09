@@ -1,6 +1,6 @@
-## 4. Channels
+## 5. Channels
 
-### 4.1. Top Channels
+### 5.1. Top Channels
 
 ```shell
 curl "analytics.getsocial.io/api/channels/top?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
@@ -46,7 +46,7 @@ limit     | `number` | 10           | Max number of results to retrieve
 List of top channels with total shares and referrals.
 
 
-### 4.2. Top Channels in last 24-hours
+### 5.2. Top Channels in last 24-hours
 
 ```shell
 curl "analytics.getsocial.io/api/channels/top?limit=3&sort_by=referrals" \
@@ -94,7 +94,7 @@ sort_by   | `string` | shares | Metric used to sort channels. Accepted values ar
 List of channels sorted by `sort_by`.
 
 
-### 4.3. Top Channel Users
+### 5.3. Top Channel Users
 
 
 ```shell
@@ -144,7 +144,7 @@ limit      | `number` | 10           | Max number of results to retrieve
 List of channel top users with total visits, shares and referrals.
 
 <!--
-### 4.4. Top Channel Stories
+### 5.5. Top Channel Stories
 
 
 ```shell

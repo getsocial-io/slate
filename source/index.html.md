@@ -6,10 +6,11 @@ language_tabs: # must be one of https://git.io/vQNgJ
 
 includes:
   - introduction
-  - public/shares
+  # - public/shares
   - social/authentication
-  - social/users
+  - social/sites
   - social/stories
+  - social/users
   - social/channels
   - errors
 
