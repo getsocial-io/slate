@@ -271,7 +271,7 @@ curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
 <aside class="notice">
 You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 </aside>
-<h2 id='2-sites'>2. Sites</h2><h3 id='2-1-fetch-site'>2.1. Fetch Site</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/sites/b5b75e?from=2018-01-01&amp;to=2018-01-05"</span> <span class="se">\</span>
+<h2 id='2-sites'>2. Sites</h2><h3 id='2-1-fetch-site'>2.1. Fetch Site</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/sites?from=2018-01-01&amp;to=2018-01-05"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -284,9 +284,9 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
   </span><span class="s2">"sharing_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.37</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves analytics data for a specific site observed between two dates (inclusive).</p>
+<p>This endpoint retrieves analytics data for a site observed between two specific dates (inclusive).</p>
 <h4 id='http-request'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/sites/site_id</code></p>
+<p><code>GET http://analytics.getsocial.io/api/sites</code></p>
 <h4 id='query-parameters'>Query Parameters</h4>
 <table><thead>
 <tr>
@@ -296,12 +296,6 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 <th>Description</th>
 </tr>
 </thead><tbody>
-<tr>
-<td>site_id</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Site identifier</td>
-</tr>
 <tr>
 <td>from</td>
 <td><code>string</code></td>
