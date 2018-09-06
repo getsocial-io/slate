@@ -141,7 +141,7 @@ curl "analytics.getsocial.io/api/stories/abcd1234?from=2018-01-01&to=2018-01-31"
 }
 ```
 
-This endpoint retrieves the story information with total visits, shares, referrals, sharing rate and virality score between the two dates specified (inclusive).
+This endpoint retrieves the story information with total visits, shares, referrals, share rate and virality score between the two dates specified (inclusive).
 
 
 #### HTTP Request
@@ -159,7 +159,7 @@ to        | `string` | -            | Date to which to stop counting data
 
 #### Returns
 
-Story with total visits, shares and referrals.
+Story with total visits, shares, referrals, share rate and virality score.
 
 
 ### 3.4. Fetch Story Identifier
