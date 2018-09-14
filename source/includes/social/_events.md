@@ -1,6 +1,6 @@
-## 5. Events
+## 6. Events
 
-### 5.1. List Events
+### 6.1. List Events
 
 ```shell
 curl "analytics.getsocial.io/api/events/list?from=2018-01-01&to=2018-01-3&user=1200139&channel=facebook&limit=2" \
@@ -43,12 +43,12 @@ on submission.
 
 Parameter | Type     | Default | Description
 --------- | -------- | ------- | --------
-from      | `string` | -       | Date from which to start counting data
-to        | `string` | -       | Date to which to stop counting data
-user      | `string` | -       | Argument with which to refine search
-story     | `string` | -       | Argument with which to refine search
-channel   | `string` | -       | Argument with which to refine search
-type      | `string` | -       | Argument with which to refine search
+from      | `string` | -       | Date from which to start counting data; is required
+to        | `string` | -       | Date to which to stop counting data; is required
+user      | `string` | -       | Argument with which to refine search, must be matched if present
+story     | `string` | -       | Argument with which to refine search, must be matched if present
+channel   | `string` | -       | Argument with which to refine search, must be matched if present
+type      | `string` | -       | Argument with which to refine search, must be matched if present
 limit     | `number` | 10      | Max number of results to retrieve; 1000 is the hard limit by request
 
 #### Returns
@@ -56,7 +56,7 @@ limit     | `number` | 10      | Max number of results to retrieve; 1000 is the 
 List of detailed conversion events, ordered by date.
 
 
-### 5.2. Count Events
+### 6.2. Count Events
 
 ```shell
 curl "analytics.getsocial.io/api/events/count?story=274819848&type=purchases" \
@@ -81,12 +81,12 @@ This endpoint counts the total number of events given the query arguments provid
 
 Parameter | Type     | Default | Description
 --------- | -------- | ------- | --------
-from      | `string` | -       | Date from which to start counting data
-to        | `string` | -       | Date to which to stop counting data
-user      | `string` | -       | Argument with which to refine search
-story     | `string` | -       | Argument with which to refine search
-channel   | `string` | -       | Argument with which to refine search
-type      | `string` | -       | Argument with which to refine search
+from      | `string` | -       | Date from which to start counting data; is required
+to        | `string` | -       | Date to which to stop counting data; is required
+user      | `string` | -       | Argument with which to refine search, must be matched if present
+story     | `string` | -       | Argument with which to refine search, must be matched if present
+channel   | `string` | -       | Argument with which to refine search, must be matched if present
+type      | `string` | -       | Argument with which to refine search, must be matched if present
 
 
 #### Returns
@@ -94,7 +94,7 @@ type      | `string` | -       | Argument with which to refine search
 Total number of elements found.
 
 
-### 5.3. Count Events By Attribute
+### 6.3. Count Events By Attribute
 
 
 ```shell
@@ -127,13 +127,13 @@ Counts number of results grouped by an attribute (channel in this example), opti
 
 Parameter | Type     | Default | Description
 --------- | -------- | ------- | --------
-attribute | `string` | -       | Attribute with which to group event counts (`users`, `stories`, `channels` or `types`)
-from      | `string` | -       | Date from which to start counting data
-to        | `string` | -       | Date to which to stop counting data
-user      | `string` | -       | Argument with which to refine search
-story     | `string` | -       | Argument with which to refine search
-channel   | `string` | -       | Argument with which to refine search
-type      | `string` | -       | Argument with which to refine search
+attribute | `string` | -       | Attribute with which to group event counts (`users`, `stories`, `channels` or `types`); is required
+from      | `string` | -       | Date from which to start counting data; is required
+to        | `string` | -       | Date to which to stop counting data; is required
+user      | `string` | -       | Argument with which to refine search, must be matched if present
+story     | `string` | -       | Argument with which to refine search, must be matched if present
+channel   | `string` | -       | Argument with which to refine search, must be matched if present
+type      | `string` | -       | Argument with which to refine search, must be matched if present
 limit     | `number` | 10      | Max number of results to retrieve; 1000 is the hard limit by request
 
 
