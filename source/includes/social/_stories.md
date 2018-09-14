@@ -16,6 +16,8 @@ curl "analytics.getsocial.io/api/stories/top?from=2018-01-01&to=2018-01-3&sort_b
     "visits": 123,
     "shares": 40,
     "referrals": 150,
+    "sharing_rate": 35.52,
+    "viral_score": 75.23,
     "title": "The Precipice",
     "path": "/"
   },
@@ -24,13 +26,15 @@ curl "analytics.getsocial.io/api/stories/top?from=2018-01-01&to=2018-01-3&sort_b
     "visits": 190,
     "shares": 51,
     "referrals": 40,
+    "sharing_rate": 26.84,
+    "viral_score": 5.23,
     "title": "The Frigate Pallada",
     "path": "/"
   }
 ]
 ```
 
-This endpoint retrieves the overall top stories, with total visits, shares and referrals between the two dates specified (inclusive).
+This endpoint retrieves the overall top stories, with total visits, shares, referrals, share rate and virality score between the two dates specified (inclusive).
 
 
 #### HTTP Request
@@ -43,13 +47,13 @@ Parameter | Type     | Default      | Description
 --------- | -------- | ------------ | --------
 from      | `string` | -            | Date from which to start counting data
 to        | `string` | -            | Date to which to stop counting data
-sort_by   | `string` | `shares`     | Criteria by which to sort stories, can be `visits`, `shares` or `referrals`
+sort_by   | `string` | `shares`     | Criteria by which to sort stories, can be `visits`, `shares`, `referrals`, `sharing_rate` or `viral_score`
 limit     | `number` | 10           | Max number of results to retrieve
 
 
 #### Returns
 
-List of top stories with total visits, shares and referrals.
+List of top stories with total visits, shares, referrals, share rate and virality score.
 
 
 ### 3.2. Top Stories in last 24-hours
@@ -69,6 +73,8 @@ curl "analytics.getsocial.io/api/stories/top?limit=3&sort_by=referrals" \
     "title": "Article z",
     "visits": 100,
     "shares": 40,
+    "sharing_rate": 40,
+    "viral_score": 30.04,
     "referrals": 150
   },
   {
@@ -77,6 +83,8 @@ curl "analytics.getsocial.io/api/stories/top?limit=3&sort_by=referrals" \
     "title": "Article x",
     "visits": 60,
     "shares": 51,
+    "sharing_rate": 85,
+    "viral_score": 10.32,
     "referrals": 40
   },
   {
@@ -85,12 +93,14 @@ curl "analytics.getsocial.io/api/stories/top?limit=3&sort_by=referrals" \
     "title": "Article y",
     "visits": 150,
     "shares": 100,
+    "sharing_rate": 66.67,
+    "viral_score": 2.19,
     "referrals": 122
   }
 ]
 ```
 
-This endpoint retrieves the top stories in the last 24 hours sorted by a specific metric. It can be used to retrieve the most shared, most referred or most visited stories.
+This endpoint retrieves the top stories in the last 24 hours sorted by a specific metric. It can be used to retrieve the most shared, most referred, most visited or most viral stories.
 
 #### HTTP Request
 
@@ -101,7 +111,7 @@ This endpoint retrieves the top stories in the last 24 hours sorted by a specifi
 Parameter | Type     | Default | Description
 --------- | -------- | --------- | --------
 limit     | `number` | 10 | Number of stories to be retrieved
-sort_by   | `string` | shares | Metric used to sort stories. Accepted values are `visits`, `shares` and `referrals`
+sort_by   | `string` | shares | Metric used to sort stories. Accepted values are `visits`, `shares`, `referrals`, `sharing_rate` and `viral_score`
 
 
 #### Returns
@@ -131,7 +141,7 @@ curl "analytics.getsocial.io/api/stories/abcd1234?from=2018-01-01&to=2018-01-31"
 }
 ```
 
-This endpoint retrieves the story information with total visits, shares, referrals, share rate and viral score between the two dates specified (inclusive).
+This endpoint retrieves the story information with total visits, shares, referrals, share rate and virality score between the two dates specified (inclusive).
 
 
 #### HTTP Request
@@ -149,7 +159,7 @@ to        | `string` | -            | Date to which to stop counting data
 
 #### Returns
 
-Story with total visits, shares and referrals.
+Story with total visits, shares, referrals, share rate and virality score.
 
 
 ### 3.4. Fetch Story Identifier

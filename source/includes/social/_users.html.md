@@ -1,6 +1,6 @@
-## 2. Users
+## 4. Users
 
-### 2.1. Top Users
+### 4.1. Top Users
 
 ```shell
 curl "analytics.getsocial.io/api/users/top?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
@@ -48,7 +48,7 @@ limit     | `number` | 10           | Max number of results to retrieve
 List of top users with total visits, shares and referrals.
 
 
-### 2.2. Fetch User
+### 4.2. Fetch User
 
 ```shell
 curl "analytics.getsocial.io/api/users/friend%40gmail.com?from=2018-01-01&to=2018-01-31" \
@@ -87,7 +87,7 @@ to        | `string` | -            | Date to which to stop counting data
 User with total visits, shares and referrals.
 
 
-### 2.3. Top User Stories
+### 4.3. Top User Stories
 
 ```shell
 curl "analytics.getsocial.io/api/users/friend%40gmail.com/stories?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
@@ -140,7 +140,7 @@ limit     | `number` | 10           | Max number of results to retrieve
 List of user top stories with total visits, shares and referrals.
 
 
-### 2.4. Top User Channels
+### 4.4. Top User Channels
 
 ```shell
 curl "analytics.getsocial.io/api/users/friend%40gmail.com/channels?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
