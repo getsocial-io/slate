@@ -224,7 +224,7 @@ curl "analytics.getsocial.io/api/users/friend%40gmail.com/flow" \
 }
 ```
 
-This endpoint retrieves the total user data recorded since it's first session.
+This endpoint retrieves the total user data recorded since their first session.
 
 
 #### HTTP Request
