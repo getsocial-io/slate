@@ -47,7 +47,7 @@ limit     | `number` | 10           | Max number of results to retrieve
 
 Field        | Type      | Description
 ------------ | --------- | --------
--            | <a href="#returns-2">`User[]`</a>  | Top users
+-            | <a href="#user-returns">`User[]`</a>  | Top users
 
 
 ### 4.2. Fetch User
@@ -83,8 +83,7 @@ user_id   | `string` | -            | User identifier
 from      | `string` | -            | Date from which to start counting data
 to        | `string` | -            | Date to which to stop counting data
 
-
-#### Returns
+<h4 id="user-returns">Returns</h4>
 
 Field        | Type      | Description
 ------------ | --------- | --------

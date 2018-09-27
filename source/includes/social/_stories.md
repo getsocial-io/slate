@@ -55,7 +55,7 @@ limit     | `number` | 10           | Max number of results to retrieve
 
 Field        | Type      | Description
 ------------ | --------- | --------
--            | <a href="#returns-3">`Story[]`</a>  | Top stories
+-            | <a href="#story-returns">`Story[]`</a>  | Top stories
 
 ### 3.2. Top Stories in last 24-hours
 
@@ -119,7 +119,7 @@ sort_by   | `string` | shares | Metric used to sort stories. Accepted values are
 
 Field        | Type      | Description
 ------------ | --------- | --------
--            | <a href="#returns-3">`Story[]`</a>  | Top stories
+-            | <a href="#story-returns">`Story[]`</a>  | Top stories
 
 
 ### 3.3. Fetch Story
@@ -160,7 +160,7 @@ from      | `string` | -            | Date from which to start counting data
 to        | `string` | -            | Date to which to stop counting data
 
 
-#### Returns
+<h4 id="story-returns">Returns</h4>
 
 Field        | Type      | Description
 ------------ | --------- | --------
