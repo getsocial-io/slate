@@ -12,6 +12,7 @@ includes:
   - social/stories
   - social/users
   - social/channels
+  - social/events
   - errors
 
 search: true

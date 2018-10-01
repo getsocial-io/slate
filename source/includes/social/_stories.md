@@ -230,17 +230,13 @@ curl "analytics.getsocial.io/api/stories/abcd1234/users?from=2018-01-01&to=2018-
     "identifier": "friend@gmail.com",
     "visits": 113,
     "shares": 21,
-    "referrals": 64,
-    "title": "Ninfodora Ivánovna",
-    "path": "/goncharov/h/310/web.php"
+    "referrals": 64
   },
   {
     "identifier": "enemy@gmail.com",
     "visits": 81,
     "shares": 18,
-    "referrals": 72,
-    "title": "Fathers and Sons",
-    "path": "/page-12/1423523/fathers-and-sons-1"
+    "referrals": 72
   }
 ]
 ```
