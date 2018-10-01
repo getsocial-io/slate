@@ -240,6 +240,9 @@
                   <li>
                     <a href="#5-channels" class="toc-h2 toc-link" data-title="5. Channels">5. Channels</a>
                   </li>
+                  <li>
+                    <a href="#6-events" class="toc-h2 toc-link" data-title="6. Events">6. Events</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -652,17 +655,13 @@ an attempt is made to understand misencoded paths. For example for the URL <code
     </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"friend@gmail.com"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">113</span><span class="p">,</span><span class="w">
     </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ninfodora Ivánovna"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/goncharov/h/310/web.php"</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">64</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"enemy@gmail.com"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"visits"</span><span class="p">:</span><span class="w"> </span><span class="mi">81</span><span class="p">,</span><span class="w">
     </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fathers and Sons"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/page-12/1423523/fathers-and-sons-1"</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">72</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
@@ -1534,6 +1533,232 @@ limit      | `number` | 10           | Max number of results to retrieve
 
 List of channel top stories with total visits, shares and referrals.
 -->
+<h2 id='6-events'>6. Events</h2><h3 id='6-1-list-events'>6.1. List Events</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/events/list?from=2018-01-01&amp;to=2018-01-3&amp;user=1200139&amp;channel=facebook&amp;limit=2"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1200139"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-07-02 15:38:15 +0100"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"story"</span><span class="p">:</span><span class="w"> </span><span class="s2">"story-id-13411"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"channel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"facebook"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a1b2c3"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD 1198.05"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1200139"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-07-02 15:38:05 +0100"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"story"</span><span class="p">:</span><span class="w"> </span><span class="s2">"story-id-22001"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"channel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"facebook"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d4e5f6"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a complete list of individual conversion events, with the attributes provided
+on submission.</p>
+<h4 id='http-request'>HTTP Request</h4>
+<p><code>GET http://analytics.getsocial.io/api/events/list</code></p>
+<h4 id='query-parameters'>Query Parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>from</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date from which to start counting data; is required</td>
+</tr>
+<tr>
+<td>to</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date to which to stop counting data; is required</td>
+</tr>
+<tr>
+<td>user</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Argument with which to refine search, must be matched if present</td>
+</tr>
+<tr>
+<td>story</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Argument with which to refine search, must be matched if present</td>
+</tr>
+<tr>
+<td>channel</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Argument with which to refine search, must be matched if present</td>
+</tr>
+<tr>
+<td>type</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Argument with which to refine search, must be matched if present</td>
+</tr>
+<tr>
+<td>limit</td>
+<td><code>number</code></td>
+<td>10</td>
+<td>Max number of results to retrieve; 1000 is the hard limit by request</td>
+</tr>
+</tbody></table>
+<h4 id='returns'>Returns</h4>
+<p>List of detailed conversion events, ordered by date.</p>
+<h3 id='6-2-count-events'>6.2. Count Events</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/events/count?story=274819848&amp;type=purchases"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">122</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint counts the total number of events given the query arguments provided.</p>
+<h4 id='http-request-2'>HTTP Request</h4>
+<p><code>GET http://analytics.getsocial.io/api/events/count</code></p>
+<h4 id='query-parameters-2'>Query Parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>from</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date from which to start counting data; is required</td>
+</tr>
+<tr>
+<td>to</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date to which to stop counting data; is required</td>
+</tr>
+<tr>
+<td>user</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Argument with which to refine search, must be matched if present</td>
+</tr>
+<tr>
+<td>story</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Argument with which to refine search, must be matched if present</td>
+</tr>
+<tr>
+<td>channel</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Argument with which to refine search, must be matched if present</td>
+</tr>
+<tr>
+<td>type</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Argument with which to refine search, must be matched if present</td>
+</tr>
+</tbody></table>
+<h4 id='returns-2'>Returns</h4>
+<p>Total number of elements found.</p>
+<h3 id='6-3-count-events-by-attribute'>6.3. Count Events By Attribute</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/events/count/channels?from=2018-01-01&amp;to=2018-01-3&amp;user=AmAm1234&amp;limit=2"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"facebook"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">31</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"twitter"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Counts number of results grouped by an attribute (channel in this example), optionally filtered by user, story channel or event type.</p>
+<h4 id='http-request-3'>HTTP Request</h4>
+<p><code>GET http://analytics.getsocial.io/api/count/&lt;attribute&gt;</code></p>
+<h4 id='query-parameters-3'>Query Parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>attribute</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Attribute with which to group event counts (<code>users</code>, <code>stories</code>, <code>channels</code> or <code>types</code>); is required</td>
+</tr>
+<tr>
+<td>from</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date from which to start counting data; is required</td>
+</tr>
+<tr>
+<td>to</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date to which to stop counting data; is required</td>
+</tr>
+<tr>
+<td>user</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Argument with which to refine search, must be matched if present</td>
+</tr>
+<tr>
+<td>story</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Argument with which to refine search, must be matched if present</td>
+</tr>
+<tr>
+<td>channel</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Argument with which to refine search, must be matched if present</td>
+</tr>
+<tr>
+<td>type</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Argument with which to refine search, must be matched if present</td>
+</tr>
+<tr>
+<td>limit</td>
+<td><code>number</code></td>
+<td>10</td>
+<td>Max number of results to retrieve; 1000 is the hard limit by request</td>
+</tr>
+</tbody></table>
+<h4 id='returns-3'>Returns</h4>
+<p>List of events grouped by an attribute, with the corresponding ID per element; sorted by number of results.</p>
 <h1 id='errors'>Errors</h1>
 <p>The GetSocial API uses the following error codes:</p>
 
