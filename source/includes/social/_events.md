@@ -3,7 +3,7 @@
 ### 6.1. List Events
 
 ```shell
-curl "analytics.getsocial.io/api/events/list?from=2018-01-01&to=2018-01-3&user=1200139&channel=facebook&limit=2" \
+curl "analytics.getsocial.io/api/events/list?from=2018-01-01&to=2018-01-31&user=1200139&channel=facebook&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -98,7 +98,7 @@ Total number of elements found.
 
 
 ```shell
-curl "analytics.getsocial.io/api/events/count/channels?from=2018-01-01&to=2018-01-3&user=AmAm1234&limit=2" \
+curl "analytics.getsocial.io/api/events/count/channels?from=2018-01-01&to=2018-01-31&user=AmAm1234&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
