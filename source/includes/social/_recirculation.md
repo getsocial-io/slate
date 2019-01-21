@@ -15,10 +15,14 @@ curl "analytics.getsocial.io/api/stories/abcd1234/recirculation/top?limit=2&from
 [
   {
     "path": "/",
+    "identifier": "abcd1234",
+    "title": "Lifestyle Global",
     "count": "44012"
   },
   {
     "path": "/7-dieting-tips",
+    "identifier": "aceg1357",
+    "title": "Our top 7 dieting tips",
     "count": "1023"
   }
 ]
@@ -56,10 +60,14 @@ curl "analytics.getsocial.io/api/channels/facebook/recirculation/top?limit=2&fro
 [
   {
     "path": "/",
+    "identifier": "abcd1234",
+    "title": "Lifestyle Global",
     "count": "45617"
   },
   {
     "path": "/7-dieting-tips",
+    "identifier": "aceg1357",
+    "title": "Our top 7 dieting tips",
     "count": "987"
   }
 ]
@@ -97,10 +105,14 @@ curl "analytics.getsocial.io/api/recirculation/top?limit=2&from=2018-01-01&to=20
 [
   {
     "path": "/",
+    "identifier": "abcd1234",
+    "title": "Lifestyle Global",
     "count": "301980"
   },
   {
     "path": "/7-dieting-tips",
+    "identifier": "aceg1357",
+    "title": "Our top 7 dieting tips",
     "count": "32134"
   }
 ]
