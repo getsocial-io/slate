@@ -1,5 +1,10 @@
 ## 4. Users
 
+<aside class="notice">
+All user-related endpoints only consider actions by known users: you must make use of
+our influencers feature.
+</aside>
+
 ### 4.1. Top Users
 
 ```shell
@@ -28,7 +33,6 @@ curl "analytics.getsocial.io/api/users/top?from=2018-01-01&to=2018-01-31&sort_by
 
 This endpoint retrieves the overall top users, with total visits, shares and referrals between the two dates specified (inclusive).
 
-
 #### HTTP Request
 
 `GET http://analytics.getsocial.io/api/users/top`
@@ -53,7 +57,7 @@ Field        | Type      | Description
 ### 4.2. Fetch User
 
 ```shell
-curl "analytics.getsocial.io/api/users/friend%40gmail.com?from=2018-01-01&to=2018-01-311" \
+curl "analytics.getsocial.io/api/users/friend%40gmail.com?from=2018-01-01&to=2018-01-31" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
