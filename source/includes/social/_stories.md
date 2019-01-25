@@ -3,7 +3,7 @@
 ### 3.1. Top Stories
 
 ```shell
-curl "analytics.getsocial.io/api/stories/top?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
+curl "analytics.getsocial.io/api/stories/top?from=2018-01-01&to=2018-01-31&sort_by=shares&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -125,7 +125,7 @@ Field        | Type      | Description
 ### 3.3. Fetch Story
 
 ```shell
-curl "analytics.getsocial.io/api/stories/abcd1234?from=2018-01-01&to=2018-01-31" \
+curl "analytics.getsocial.io/api/stories/abcd1234?from=2018-01-01&to=2018-01-311" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -149,7 +149,7 @@ This endpoint retrieves the story information with total visits, shares, referra
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/stories/story_id`
+`GET http://analytics.getsocial.io/api/stories/<story_id>`
 
 #### Query Parameters
 
@@ -218,7 +218,7 @@ identifier   | `string`  | The story identifier
 
 
 ```shell
-curl "analytics.getsocial.io/api/stories/abcd1234/users?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
+curl "analytics.getsocial.io/api/stories/abcd1234/users?from=2018-01-01&to=2018-01-31&sort_by=shares&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -246,7 +246,7 @@ This endpoint retrieves the top users for the story, with total visits, shares a
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/stories/story_id/users`
+`GET http://analytics.getsocial.io/api/stories/<story_id>/users`
 
 #### Query Parameters
 
@@ -275,7 +275,7 @@ path         | `string`  | The story URL path
 
 
 ```shell
-curl "analytics.getsocial.io/api/stories/abcd1234/channels?from=2018-01-01&to=2018-01-3&sort_by=shares&limit=2" \
+curl "analytics.getsocial.io/api/stories/abcd1234/channels?from=2018-01-01&to=2018-01-31&sort_by=shares&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
