@@ -802,10 +802,8 @@ limit     | `number` | 10           | Max number of results to retrieve
 List of story top channels with total visits, shares and referrals.
 -->
 <h2 id='4-users'>4. Users</h2>
-<aside class="notice">
-All user-related endpoints only consider actions by known users: you must make use of
-our influencers feature.
-</aside>
+<p>All user-related endpoints only consider actions by known users: you must make use of
+our <a href="http://help.getsocial.io/getsocial-analytics/how-can-i-use-the-influencers-feature">influencers feature</a>.</p>
 <h3 id='4-1-top-users'>4.1. Top Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/users/top?from=2018-01-01&amp;to=2018-01-31&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
@@ -1541,7 +1539,14 @@ limit      | `number` | 10           | Max number of results to retrieve
 
 List of channel top stories with total visits, shares and referrals.
 -->
-<h2 id='6-events'>6. Events</h2><h3 id='6-1-list-events'>6.1. List Events</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/events/list?from=2018-01-01&amp;to=2018-01-31&amp;user=1200139&amp;channel=facebook&amp;limit=2"</span> <span class="se">\</span>
+<h2 id='6-events'>6. Events</h2>
+<p>To start using events, first <a href="https://getsocial.io/redirect/conversions/">create event types</a> in your GetSocial dashboard.</p>
+
+<aside class="notice">
+If our influencers feature if not enabled and setup in your website, the following endpoints will
+not have user information.
+</aside>
+<h3 id='6-1-list-events'>6.1. List Events</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/events/list?from=2018-01-01&amp;to=2018-01-31&amp;user=1200139&amp;channel=facebook&amp;limit=2"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
