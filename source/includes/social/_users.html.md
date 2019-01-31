@@ -1,9 +1,7 @@
 ## 4. Users
 
-<aside class="notice">
 All user-related endpoints only consider actions by known users: you must make use of
-our influencers feature.
-</aside>
+our [influencers feature](http://help.getsocial.io/getsocial-analytics/how-can-i-use-the-influencers-feature).
 
 ### 4.1. Top Users
 

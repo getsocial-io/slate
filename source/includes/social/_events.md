@@ -1,5 +1,12 @@
 ## 6. Events
 
+To start using events, first [create event types](https://getsocial.io/redirect/conversions/) in your GetSocial dashboard.
+
+<aside class="notice">
+If our influencers feature if not enabled and setup in your website, the following endpoints will
+not have user information.
+</aside>
+
 ### 6.1. List Events
 
 ```shell
