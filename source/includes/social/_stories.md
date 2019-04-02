@@ -18,6 +18,8 @@ curl "analytics.getsocial.io/api/stories/top?from=2018-01-01&to=2018-01-31&sort_
     "referrals": 150,
     "sharing_rate": 35.52,
     "viral_score": 75.23,
+    "recirculation_percentage": 0.034,
+    "recirculation_depth": 2.4,
     "title": "The Precipice",
     "path": "/"
   },
@@ -28,13 +30,15 @@ curl "analytics.getsocial.io/api/stories/top?from=2018-01-01&to=2018-01-31&sort_
     "referrals": 40,
     "sharing_rate": 26.84,
     "viral_score": 5.23,
+    "recirculation_percentage": 0.043,
+    "recirculation_depth": 4.2,
     "title": "The Frigate Pallada",
     "path": "/"
   }
 ]
 ```
 
-This endpoint retrieves the overall top stories, with total visits, shares, referrals, share rate and virality score between the two dates specified (inclusive).
+This endpoint retrieves the overall top stories, with total visits, shares, referrals, share rate, virality score and recirculation between the two dates specified (inclusive).
 
 
 #### HTTP Request
@@ -47,7 +51,7 @@ Parameter | Type     | Default      | Description
 --------- | -------- | ------------ | --------
 from      | `string` | -            | Date from which to start counting data
 to        | `string` | -            | Date to which to stop counting data
-sort_by   | `string` | `shares`     | Criteria by which to sort stories, can be `visits`, `shares`, `referrals`, `sharing_rate` or `viral_score`
+sort_by   | `string` | `shares`     | Criteria by which to sort stories, can be `visits`, `shares`, `referrals`, `sharing_rate`, `viral_score`, `recirculation_percentage` or `recirculation_depth`
 limit     | `number` | 10           | Max number of results to retrieve
 
 
@@ -76,6 +80,8 @@ curl "analytics.getsocial.io/api/stories/top?limit=3&sort_by=referrals" \
     "shares": 40,
     "sharing_rate": 40,
     "viral_score": 30.04,
+    "recirculation_percentage": 0.034,
+    "recirculation_depth": 2.4,
     "referrals": 150
   },
   {
@@ -86,6 +92,8 @@ curl "analytics.getsocial.io/api/stories/top?limit=3&sort_by=referrals" \
     "shares": 51,
     "sharing_rate": 85,
     "viral_score": 10.32,
+    "recirculation_percentage": 0.043,
+    "recirculation_depth": 4.2,
     "referrals": 40
   },
   {
@@ -96,12 +104,14 @@ curl "analytics.getsocial.io/api/stories/top?limit=3&sort_by=referrals" \
     "shares": 100,
     "sharing_rate": 66.67,
     "viral_score": 2.19,
+    "recirculation_percentage": 0.054,
+    "recirculation_depth": 1.0,
     "referrals": 122
   }
 ]
 ```
 
-This endpoint retrieves the top stories in the last 24 hours sorted by a specific metric. It can be used to retrieve the most shared, most referred, most visited or most viral stories.
+This endpoint retrieves the top stories in the last 24 hours sorted by a specific metric. It can be used to retrieve the most shared, most referred, most visited, most viral stories or most recirculated stories.
 
 #### HTTP Request
 
@@ -112,7 +122,7 @@ This endpoint retrieves the top stories in the last 24 hours sorted by a specifi
 Parameter | Type     | Default | Description
 --------- | -------- | --------- | --------
 limit     | `number` | 10 | Number of stories to be retrieved
-sort_by   | `string` | shares | Metric used to sort stories. Accepted values are `visits`, `shares`, `referrals`, `sharing_rate` and `viral_score`
+sort_by   | `string` | `shares`     | Criteria by which to sort stories, can be `visits`, `shares`, `referrals`, `sharing_rate`, `viral_score`, `recirculation_percentage` or `recirculation_depth`
 
 
 #### Returns
@@ -320,3 +330,51 @@ limit     | `number` | 10           | Max number of results to retrieve
 
 List of story top channels with total visits, shares and referrals.
 -->
+
+### 3.6. Top recirculation destinations
+
+On GetSocial, we measure recirculation of articles that were visited from a share. This endpoint retrieves the most recirculated to stories (destination stories).
+
+If you instead need the top stories or channels by own recirculation please see endpoints **3.1. Top Stories** and **5.1. Top Channels**, with a sort criteria of recirculation.
+
+```shell
+curl "analytics.getsocial.io/api/stories/top/recirculated_to?limit=2&from=2018-01-01&to=2018-01-31" \
+  -H "Authorization: abcdef0123abcdef0123"
+```
+
+> The above command returns a JSON structured like this:
+
+```json
+[
+  {
+    "path": "/",
+    "identifier": "abcd1234",
+    "title": "Lifestyle Global",
+    "count": 301980
+  },
+  {
+    "path": "/7-dieting-tips",
+    "identifier": "aceg1357",
+    "title": "Our top 7 dieting tips",
+    "count": 32134
+  }
+]
+```
+
+#### HTTP Request
+
+`GET http://analytics.getsocial.io/api/stories/top/recirculated_to`
+
+#### Query Parameters
+
+Parameter | Type     | Default | Description
+--------- | -------- | ------- | --------
+story_id  | `string` | -       | Source Story ID; is optional
+channel   | `string` | -       | Source Channel ID, like `facebook` or `twitter`; is optional
+from      | `string` | -       | Date from which to start counting data; is required
+to        | `string` | -       | Date to which to stop counting data; is required
+limit     | `number` | 10      | Max number of results to retrieve; 100 is the hard limit by request
+
+#### Returns
+
+List of top recirculated to stories, with times visited.
