@@ -13,6 +13,7 @@ includes:
   - social/users
   - social/channels
   - social/events
+  - social/locations
   - errors
 
 search: true
