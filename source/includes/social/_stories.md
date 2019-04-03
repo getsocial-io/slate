@@ -93,7 +93,7 @@ curl "analytics.getsocial.io/api/stories/top?limit=3&sort_by=referrals" \
     "sharing_rate": 85.0,
     "viral_score": 10.32,
     "recirculation_percentage": 4.3,
-    "recirculation_depth": 4.2,
+    "recirculation_depth": 4.29,
     "referrals": 40
   },
   {
