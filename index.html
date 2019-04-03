@@ -243,6 +243,9 @@
                   <li>
                     <a href="#6-events" class="toc-h2 toc-link" data-title="6. Events">6. Events</a>
                   </li>
+                  <li>
+                    <a href="#7-locations" class="toc-h2 toc-link" data-title="7. Locations">7. Locations</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -876,7 +879,7 @@ List of story top channels with total visits, shares and referrals.
 </tbody></table>
 <h4 id='returns-5'>Returns</h4>
 <p>List of top recirculated to stories, with times visited.</p>
-<h3 id='3-6-top-story-locations'>3.6. Top Story Locations</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/stories/abcd1234/locations?from=2018-01-01&amp;to=2018-01-31&amp;sort_by=shares"</span> <span class="se">\</span>
+<h3 id='3-7-top-story-locations'>3.7. Top Story Locations</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/stories/abcd1234/locations?from=2018-01-01&amp;to=2018-01-31&amp;sort_by=shares"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -2066,6 +2069,99 @@ on submission.</p>
 </tbody></table>
 <h4 id='returns-3'>Returns</h4>
 <p>List of events grouped by an attribute, with the corresponding ID per element; sorted by number of results.</p>
+<h2 id='7-locations'>7. Locations</h2><h3 id='7-1-top-locations'>7.1. Top Locations</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/locations/top?from=2018-01-01&amp;to=2018-01-31&amp;sort_by=shares"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"country_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PT"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lisboa"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">3500</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"country_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PT"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Porto"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">3000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">2345</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"country_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ES"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Madrid"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">2670</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"country_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Oregon"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">2500</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">1240</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves the overall top locations, with total shares and referrals between the two dates specified (inclusive).</p>
+<h4 id='http-request'>HTTP Request</h4>
+<p><code>GET http://analytics.getsocial.io/api/locations/top</code></p>
+<h4 id='query-parameters'>Query Parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>from</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date from which to start counting data</td>
+</tr>
+<tr>
+<td>to</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date to which to stop counting data</td>
+</tr>
+<tr>
+<td>sort_by</td>
+<td><code>string</code></td>
+<td><code>shares</code></td>
+<td>Criteria by which to sort locations, can be <code>shares</code> or <code>referrals</code></td>
+</tr>
+</tbody></table>
+<h4 id='returns-where-each-element-is-defined-by'>Returns [] where each element is defined by</h4>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>country_code</td>
+<td><code>string</code></td>
+<td>The country code on ISO 3166-1 alpha-2 format</td>
+</tr>
+<tr>
+<td>region</td>
+<td><code>string</code></td>
+<td>The region name</td>
+</tr>
+<tr>
+<td>shares</td>
+<td><code>integer</code></td>
+<td>Number of shares performed on that region</td>
+</tr>
+<tr>
+<td>referrals</td>
+<td><code>integer</code></td>
+<td>Number of visits on that region generated by shared posts</td>
+</tr>
+</tbody></table>
 <h1 id='errors'>Errors</h1>
 <p>The GetSocial API uses the following error codes:</p>
 
