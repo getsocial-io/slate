@@ -1,6 +1,6 @@
 ## 3. Stories
 
-### 3.1. Top Stories
+### <a id="top-stories"></a>3.1. Top Stories
 
 ```shell
 curl "analytics.getsocial.io/api/stories/top?from=2018-01-01&to=2018-01-31&sort_by=shares&limit=2" \
@@ -339,7 +339,7 @@ List of story top channels with total visits, shares and referrals.
 
 On GetSocial, we measure recirculation of articles that were visited from a share. This endpoint retrieves the most recirculated to stories (destination stories).
 
-If you instead need the top stories or channels by own recirculation please see endpoints **3.1. Top Stories** and **5.1. Top Channels**, with a sort criteria of recirculation.
+If you instead need the top stories or channels by own recirculation please see endpoints <a href="#top-stories">3.1. Top Stories</a> and <a href="#top-channels">5.1. Top Channels</a>, with a sort criteria of recirculation.
 
 ```shell
 curl "analytics.getsocial.io/api/stories/top/recirculated_to?limit=2&from=2018-01-01&to=2018-01-31" \
