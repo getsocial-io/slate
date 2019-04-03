@@ -380,7 +380,7 @@ limit     | `number` | 10      | Max number of results to retrieve; 100 is the h
 List of top recirculated to stories, with times visited.
 
 
-### 3.6. Top Story Locations
+### 3.7. Top Story Locations
 
 
 ```shell
