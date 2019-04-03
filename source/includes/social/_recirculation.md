@@ -1,3 +1,5 @@
+<!-- Deprecated -->
+
 ## 7. Recirculation
 
 On GetSocial, we measure recirculation of articles that were visited from a share.
