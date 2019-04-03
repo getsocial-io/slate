@@ -1,6 +1,6 @@
 ## 5. Channels
 
-### 5.1. Top Channels
+### <a id="top-channels"></a>5.1. Top Channels
 
 ```shell
 curl "analytics.getsocial.io/api/channels/top?from=2018-01-01&to=2018-01-31&sort_by=shares&limit=2" \
