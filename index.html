@@ -243,9 +243,6 @@
                   <li>
                     <a href="#6-events" class="toc-h2 toc-link" data-title="6. Events">6. Events</a>
                   </li>
-                  <li>
-                    <a href="#7-recirculation" class="toc-h2 toc-link" data-title="7. Recirculation">7. Recirculation</a>
-                  </li>
               </ul>
           </li>
           <li>
@@ -358,6 +355,8 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
     </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w">
     </span><span class="s2">"sharing_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">35.52</span><span class="p">,</span><span class="w">
     </span><span class="s2">"viral_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">75.23</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.034</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_depth"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.4</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Precipice"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="w">
   </span><span class="p">},</span><span class="w">
@@ -368,12 +367,14 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
     </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
     </span><span class="s2">"sharing_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">26.84</span><span class="p">,</span><span class="w">
     </span><span class="s2">"viral_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.23</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.043</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_depth"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.2</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Frigate Pallada"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves the overall top stories, with total visits, shares, referrals, share rate and virality score between the two dates specified (inclusive).</p>
+<p>This endpoint retrieves the overall top stories, with total visits, shares, referrals, share rate, virality score and recirculation between the two dates specified (inclusive).</p>
 <h4 id='http-request'>HTTP Request</h4>
 <p><code>GET http://analytics.getsocial.io/api/stories/top</code></p>
 <h4 id='query-parameters'>Query Parameters</h4>
@@ -401,7 +402,7 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 <td>sort_by</td>
 <td><code>string</code></td>
 <td><code>shares</code></td>
-<td>Criteria by which to sort stories, can be <code>visits</code>, <code>shares</code>, <code>referrals</code>, <code>sharing_rate</code> or <code>viral_score</code></td>
+<td>Criteria by which to sort stories, can be <code>visits</code>, <code>shares</code>, <code>referrals</code>, <code>sharing_rate</code>, <code>viral_score</code>, <code>recirculation_percentage</code> or <code>recirculation_depth</code></td>
 </tr>
 <tr>
 <td>limit</td>
@@ -439,6 +440,8 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
     </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
     </span><span class="s2">"sharing_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
     </span><span class="s2">"viral_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">30.04</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.034</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_depth"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.4</span><span class="p">,</span><span class="w">
     </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -449,6 +452,8 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
     </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">51</span><span class="p">,</span><span class="w">
     </span><span class="s2">"sharing_rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w">
     </span><span class="s2">"viral_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.32</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.043</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_depth"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.2</span><span class="p">,</span><span class="w">
     </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -459,11 +464,13 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
     </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
     </span><span class="s2">"sharing_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">66.67</span><span class="p">,</span><span class="w">
     </span><span class="s2">"viral_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.19</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.054</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_depth"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">122</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves the top stories in the last 24 hours sorted by a specific metric. It can be used to retrieve the most shared, most referred, most visited or most viral stories.</p>
+<p>This endpoint retrieves the top stories in the last 24 hours sorted by a specific metric. It can be used to retrieve the most shared, most referred, most visited, most viral stories or most recirculated stories.</p>
 <h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET http://analytics.getsocial.io/api/stories/top</code></p>
 <h4 id='query-parameters-2'>Query Parameters</h4>
@@ -484,8 +491,8 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 <tr>
 <td>sort_by</td>
 <td><code>string</code></td>
-<td>shares</td>
-<td>Metric used to sort stories. Accepted values are <code>visits</code>, <code>shares</code>, <code>referrals</code>, <code>sharing_rate</code> and <code>viral_score</code></td>
+<td><code>shares</code></td>
+<td>Criteria by which to sort stories, can be <code>visits</code>, <code>shares</code>, <code>referrals</code>, <code>sharing_rate</code>, <code>viral_score</code>, <code>recirculation_percentage</code> or <code>recirculation_depth</code></td>
 </tr>
 </tbody></table>
 <h4 id='returns-2'>Returns</h4>
@@ -801,6 +808,161 @@ limit     | `number` | 10           | Max number of results to retrieve
 
 List of story top channels with total visits, shares and referrals.
 -->
+<h3 id='3-6-top-recirculation-destinations'>3.6. Top recirculation destinations</h3>
+<p>On GetSocial, we measure recirculation of articles that were visited from a share. This endpoint retrieves the most recirculated to stories (destination stories).</p>
+
+<p>If you instead need the top stories or channels by own recirculation please see endpoints <strong>3.1. Top Stories</strong> and <strong>5.1. Top Channels</strong>, with a sort criteria of recirculation.</p>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/stories/top/recirculated_to?limit=2&amp;from=2018-01-01&amp;to=2018-01-31"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abcd1234"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lifestyle Global"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">301980</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/7-dieting-tips"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aceg1357"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Our top 7 dieting tips"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">32134</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre><h4 id='http-request-6'>HTTP Request</h4>
+<p><code>GET http://analytics.getsocial.io/api/stories/top/recirculated_to</code></p>
+<h4 id='query-parameters-6'>Query Parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>story_id</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Source Story ID; is optional</td>
+</tr>
+<tr>
+<td>channel</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Source Channel ID, like <code>facebook</code> or <code>twitter</code>; is optional</td>
+</tr>
+<tr>
+<td>from</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date from which to start counting data; is required</td>
+</tr>
+<tr>
+<td>to</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date to which to stop counting data; is required</td>
+</tr>
+<tr>
+<td>limit</td>
+<td><code>number</code></td>
+<td>10</td>
+<td>Max number of results to retrieve; 100 is the hard limit by request</td>
+</tr>
+</tbody></table>
+<h4 id='returns-5'>Returns</h4>
+<p>List of top recirculated to stories, with times visited.</p>
+<h3 id='3-6-top-story-locations'>3.6. Top Story Locations</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/stories/abcd1234/locations?from=2018-01-01&amp;to=2018-01-31&amp;sort_by=shares"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"country_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PT"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lisboa"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">3500</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"country_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PT"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Porto"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">3000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">2345</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"country_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ES"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Madrid"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">2670</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves the top locations for the story, with total shares and referrals between the two dates specified (inclusive).</p>
+<h4 id='http-request-7'>HTTP Request</h4>
+<p><code>GET http://analytics.getsocial.io/api/stories/&lt;story_id&gt;/locations</code></p>
+<h4 id='query-parameters-7'>Query Parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>story_id</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Story identifier</td>
+</tr>
+<tr>
+<td>from</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date from which to start counting data</td>
+</tr>
+<tr>
+<td>to</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date to which to stop counting data</td>
+</tr>
+</tbody></table>
+<h4 id='returns-where-each-element-is-defined-by'>Returns [] where each element is defined by</h4>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>country_code</td>
+<td><code>string</code></td>
+<td>The country code on ISO 3166-1 alpha-2 format</td>
+</tr>
+<tr>
+<td>region</td>
+<td><code>string</code></td>
+<td>The region name</td>
+</tr>
+<tr>
+<td>shares</td>
+<td><code>integer</code></td>
+<td>Number of shares performed on that region</td>
+</tr>
+<tr>
+<td>referrals</td>
+<td><code>integer</code></td>
+<td>Number of visits on that region generated by shared posts</td>
+</tr>
+</tbody></table>
 <h2 id='4-users'>4. Users</h2>
 <p>All user-related endpoints only consider actions by known users: you must make use of
 our <a href="http://help.getsocial.io/getsocial-analytics/how-can-i-use-the-influencers-feature">influencers feature</a>.</p>
@@ -1248,17 +1410,21 @@ our <a href="http://help.getsocial.io/getsocial-analytics/how-can-i-use-the-infl
     </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Facebook"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
     </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"viral_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">100.0</span><span class="w">
+    </span><span class="s2">"viral_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.05</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_depth"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.3</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Twitter"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
     </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"viral_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.0</span><span class="w">
+    </span><span class="s2">"viral_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.12</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_depth"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves the overall top channels, with total shares and referrals between the two dates specified (inclusive).</p>
+<p>This endpoint retrieves the overall top channels, with total shares and referrals, viral score and recirculation between the two dates specified (inclusive).</p>
 <h4 id='http-request'>HTTP Request</h4>
 <p><code>GET http://analytics.getsocial.io/api/channels/top</code></p>
 <h4 id='query-parameters'>Query Parameters</h4>
@@ -1286,7 +1452,7 @@ our <a href="http://help.getsocial.io/getsocial-analytics/how-can-i-use-the-infl
 <td>sort_by</td>
 <td><code>string</code></td>
 <td>shares</td>
-<td>Metric used to sort channels. Accepted values are <code>shares</code>, <code>referrals</code> and <code>viral_score</code></td>
+<td>Metric used to sort channels. Accepted values are <code>shares</code>, <code>referrals</code>, <code>viral_score</code>, <code>recirculation_percentage</code> and <code>recirculation_depth</code></td>
 </tr>
 <tr>
 <td>limit</td>
@@ -1325,6 +1491,16 @@ our <a href="http://help.getsocial.io/getsocial-analytics/how-can-i-use-the-infl
 <td><code>float</code></td>
 <td>Virality score of channel</td>
 </tr>
+<tr>
+<td>recirculation_percentage</td>
+<td><code>float</code></td>
+<td>Average recirculation from referrals</td>
+</tr>
+<tr>
+<td>recirculation_depth</td>
+<td><code>float</code></td>
+<td>Average depth of sessions that started from a referral</td>
+</tr>
 </tbody></table>
 <h3 id='5-2-top-channels-in-last-24-hours'>5.2. Top Channels in last 24-hours</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/top?limit=3&amp;sort_by=referrals"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
@@ -1337,19 +1513,25 @@ our <a href="http://help.getsocial.io/getsocial-analytics/how-can-i-use-the-infl
     </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Facebook"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
     </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"viral_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">100.0</span><span class="w">
+    </span><span class="s2">"viral_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.15</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_depth"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.12</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Twitter"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
     </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"viral_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">60.0</span><span class="w">
+    </span><span class="s2">"viral_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">60.0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.23</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_depth"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.5</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CopyPaste"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
     </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"viral_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">20.0</span><span class="w">
+    </span><span class="s2">"viral_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">20.0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.34</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recirculation_depth"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.12</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
@@ -1375,7 +1557,7 @@ our <a href="http://help.getsocial.io/getsocial-analytics/how-can-i-use-the-infl
 <td>sort_by</td>
 <td><code>string</code></td>
 <td>shares</td>
-<td>Metric used to sort channels. Accepted values are <code>shares</code>, <code>referrals</code> and <code>viral_score</code></td>
+<td>Metric used to sort channels. Accepted values are <code>shares</code>, <code>referrals</code>, <code>viral_score</code>, <code>recirculation_percentage</code> and <code>recirculation_depth</code></td>
 </tr>
 </tbody></table>
 <h4 id='returns-2'>Returns</h4>
@@ -1407,6 +1589,16 @@ our <a href="http://help.getsocial.io/getsocial-analytics/how-can-i-use-the-infl
 <td>viral_score</td>
 <td><code>float</code></td>
 <td>Virality score of channel</td>
+</tr>
+<tr>
+<td>recirculation_percentage</td>
+<td><code>float</code></td>
+<td>Average recirculation from referrals</td>
+</tr>
+<tr>
+<td>recirculation_depth</td>
+<td><code>float</code></td>
+<td>Average depth of sessions that started from a referral</td>
 </tr>
 </tbody></table>
 <h3 id='5-3-top-channel-users'>5.3. Top Channel Users</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/facebook/users?from=2018-01-01&amp;to=2018-01-31&amp;sort_by=shares&amp;limit=2"</span> <span class="se">\</span>
@@ -1497,6 +1689,93 @@ our <a href="http://help.getsocial.io/getsocial-analytics/how-can-i-use-the-infl
 <td>referrals</td>
 <td><code>integer</code></td>
 <td>Number of visits generated by shared posts of the website by the user via a given channel</td>
+</tr>
+</tbody></table>
+<h3 id='5-4-top-channel-locations'>5.4. Top Channel Locations</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/stories/abcd1234/locations?from=2018-01-01&amp;to=2018-01-31&amp;sort_by=shares"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"country_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PT"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lisboa"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">3500</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"country_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PT"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Porto"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">3000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">2345</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"country_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ES"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Madrid"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">2670</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves the top locations for the story, with total shares and referrals between the two dates specified (inclusive).</p>
+<h4 id='http-request-4'>HTTP Request</h4>
+<p><code>GET http://analytics.getsocial.io/api/channels/&lt;channel_id&gt;/locations</code></p>
+<h4 id='query-parameters-4'>Query Parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>channel_id</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Channel identifier</td>
+</tr>
+<tr>
+<td>from</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date from which to start counting data</td>
+</tr>
+<tr>
+<td>to</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Date to which to stop counting data</td>
+</tr>
+</tbody></table>
+<h4 id='returns-where-each-element-is-defined-by'>Returns [] where each element is defined by</h4>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>country_code</td>
+<td><code>string</code></td>
+<td>The country code on ISO 3166-1 alpha-2 format</td>
+</tr>
+<tr>
+<td>region</td>
+<td><code>string</code></td>
+<td>The region name</td>
+</tr>
+<tr>
+<td>shares</td>
+<td><code>integer</code></td>
+<td>Number of shares performed on that region</td>
+</tr>
+<tr>
+<td>referrals</td>
+<td><code>integer</code></td>
+<td>Number of visits on that region generated by shared posts</td>
 </tr>
 </tbody></table>
 
@@ -1787,195 +2066,6 @@ on submission.</p>
 </tbody></table>
 <h4 id='returns-3'>Returns</h4>
 <p>List of events grouped by an attribute, with the corresponding ID per element; sorted by number of results.</p>
-<h2 id='7-recirculation'>7. Recirculation</h2>
-<p>On GetSocial, we measure recirculation of articles that were visited from a share.</p>
-<h3 id='7-1-top-recirculations-by-story'>7.1. Top recirculations by Story</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/stories/abcd1234/recirculation/top?limit=2&amp;from=2018-01-01&amp;to=2018-01-31"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns a JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abcd1234"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lifestyle Global"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"44012"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/7-dieting-tips"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aceg1357"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Our top 7 dieting tips"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1023"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves the most recirculated stories from the origin story specified by story ID.</p>
-<h4 id='http-request'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/stories/&lt;story_id&gt;/recirculation/top</code></p>
-<h4 id='query-parameters'>Query Parameters</h4>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>story_id</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Story ID</td>
-</tr>
-<tr>
-<td>from</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Date from which to start counting data; is required</td>
-</tr>
-<tr>
-<td>to</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Date to which to stop counting data; is required</td>
-</tr>
-<tr>
-<td>limit</td>
-<td><code>number</code></td>
-<td>10</td>
-<td>Max number of results to retrieve; 100 is the hard limit by request</td>
-</tr>
-</tbody></table>
-<h4 id='returns'>Returns</h4>
-<p>List of top recirculations, with times visited from origin story.</p>
-<h3 id='7-2-top-recirculations-by-channel'>7.2. Top recirculations by Channel</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/channels/facebook/recirculation/top?limit=2&amp;from=2018-01-01&amp;to=2018-01-31"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns a JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abcd1234"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lifestyle Global"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"45617"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/7-dieting-tips"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aceg1357"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Our top 7 dieting tips"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"987"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves the most recirculated stories from shares from a specific channel.</p>
-<h4 id='http-request-2'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/channels/&lt;channel&gt;/recirculation/top</code></p>
-<h4 id='query-parameters-2'>Query Parameters</h4>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>channel</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Channel ID, like <code>facebook</code> or <code>twitter</code></td>
-</tr>
-<tr>
-<td>from</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Date from which to start counting data; is required</td>
-</tr>
-<tr>
-<td>to</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Date to which to stop counting data; is required</td>
-</tr>
-<tr>
-<td>limit</td>
-<td><code>number</code></td>
-<td>10</td>
-<td>Max number of results to retrieve; 100 is the hard limit by request</td>
-</tr>
-</tbody></table>
-<h4 id='returns-2'>Returns</h4>
-<p>List of top recirculations, with times visited from origin channel.</p>
-<h3 id='7-3-top-recirculations'>7.3. Top recirculations</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"analytics.getsocial.io/api/recirculation/top?limit=2&amp;from=2018-01-01&amp;to=2018-01-31"</span> <span class="se">\</span>
-  -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns a JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abcd1234"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lifestyle Global"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"301980"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/7-dieting-tips"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aceg1357"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Our top 7 dieting tips"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32134"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves the most recirculated to stories, from origin referrals based on the bellow
-criteria.</p>
-<h4 id='http-request-3'>HTTP Request</h4>
-<p><code>GET http://analytics.getsocial.io/api/recirculation/top</code></p>
-<h4 id='query-parameters-3'>Query Parameters</h4>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>story_id</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Story ID; is optional</td>
-</tr>
-<tr>
-<td>channel</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Channel ID, like <code>facebook</code> or <code>twitter</code>; is optional</td>
-</tr>
-<tr>
-<td>from</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Date from which to start counting data; is required</td>
-</tr>
-<tr>
-<td>to</td>
-<td><code>string</code></td>
-<td>-</td>
-<td>Date to which to stop counting data; is required</td>
-</tr>
-<tr>
-<td>limit</td>
-<td><code>number</code></td>
-<td>10</td>
-<td>Max number of results to retrieve; 100 is the hard limit by request</td>
-</tr>
-</tbody></table>
-<h4 id='returns-3'>Returns</h4>
-<p>List of top recirculations, with times visited.</p>
 <h1 id='errors'>Errors</h1>
 <p>The GetSocial API uses the following error codes:</p>
 
