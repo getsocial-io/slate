@@ -89,7 +89,7 @@ curl "analytics.getsocial.io/api/channels/top?limit=3&sort_by=referrals" \
     "recirculation_depth": 3.5
   },
   {
-    "identifier": "CopyPaste",
+    "identifier": "DarkSocial",
     "shares": 10,
     "referrals": 30,
     "viral_score": 20.0,

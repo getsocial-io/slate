@@ -4,7 +4,7 @@ To start using events, first [create event types](https://getsocial.io/redirect/
 
 <aside class="notice">
 If our influencers feature if not enabled and setup in your website, the following endpoints will
-not have user information.
+be missing the user ID.
 </aside>
 
 ### 6.1. List Events

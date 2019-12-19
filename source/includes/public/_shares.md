@@ -12,7 +12,7 @@ curl "analytics.getsocial.io/api/public/stories/efgh5678/counters/total"
 {
   "facebook": 14,
   "twitter": 5,
-  "addressbar": 40,
+  "darksocial": 40,
 }
 ```
 
