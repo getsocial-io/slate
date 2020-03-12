@@ -232,7 +232,7 @@ from       | `string` | -            | Date from which to start counting data
 to         | `string` | -            | Date to which to stop counting data
 
 
-#### Returns [] where each element is defined by
+#### Fields in array response
 
 Field        | Type      | Description
 ------------ | --------- | --------

@@ -54,7 +54,7 @@ to        | `string` | -            | Date to which to stop counting data
 sort_by   | `string` | `shares`     | Criteria by which to sort locations, can be `shares` or `referrals`
 
 
-#### Returns [] where each element is defined by
+#### Fields in array response
 
 Field        | Type      | Description
 ------------ | --------- | --------

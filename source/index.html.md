@@ -14,6 +14,7 @@ includes:
   - social/channels
   - social/events
   - social/locations
+  - social/short_links
   - errors
 
 search: true
