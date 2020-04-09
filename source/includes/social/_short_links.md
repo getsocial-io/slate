@@ -3,7 +3,7 @@
 ###<a id="create-link"></a> 8.1. Create new short link
 
 ```shell
-curl -X POST "analytics.getsocial.io/api/links" \
+curl -X POST "https://analytics.getsocial.io/api/links" \
   -H "Authorization: abcdef0123abcdef0123"
   -H "Content-Type: application/x-www-form-urlencoded" \
   --data-urlencode "url=http://example.com/path"
@@ -25,7 +25,7 @@ also on your GetSocial dashboard.
 
 #### HTTP Request
 
-`POST http://analytics.getsocial.io/api/links`
+`POST https://analytics.getsocial.io/api/links`
 
 #### Query Parameters
 
@@ -45,7 +45,7 @@ link         | `string`  | The short link created
 ### 8.2. Get link statistics
 
 ```shell
-curl "analytics.getsocial.io/api/links/abcdef?from=2020-01-20" \
+curl "https://analytics.getsocial.io/api/links/abcdef?from=2020-01-20" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -84,7 +84,7 @@ The short link ID is required. You can find it in the response from <a href="#cr
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/api/<link_id>`
+`GET https://analytics.getsocial.io/api/api/<link_id>`
 
 #### Query Parameters
 
