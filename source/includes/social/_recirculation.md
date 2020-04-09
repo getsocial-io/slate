@@ -7,7 +7,7 @@ On GetSocial, we measure recirculation of articles that were visited from a shar
 ### 7.1. Top recirculations by Story
 
 ```shell
-curl "analytics.getsocial.io/api/stories/abcd1234/recirculation/top?limit=2&from=2018-01-01&to=2018-01-31" \
+curl "https://analytics.getsocial.io/api/stories/abcd1234/recirculation/top?limit=2&from=2018-01-01&to=2018-01-31" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -34,7 +34,7 @@ This endpoint retrieves the most recirculated stories from the origin story spec
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/stories/<story_id>/recirculation/top`
+`GET https://analytics.getsocial.io/api/stories/<story_id>/recirculation/top`
 
 #### Query Parameters
 
@@ -52,7 +52,7 @@ List of top recirculations, with times visited from origin story.
 ### 7.2. Top recirculations by Channel
 
 ```shell
-curl "analytics.getsocial.io/api/channels/facebook/recirculation/top?limit=2&from=2018-01-01&to=2018-01-31" \
+curl "https://analytics.getsocial.io/api/channels/facebook/recirculation/top?limit=2&from=2018-01-01&to=2018-01-31" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -79,7 +79,7 @@ This endpoint retrieves the most recirculated stories from shares from a specifi
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/channels/<channel>/recirculation/top`
+`GET https://analytics.getsocial.io/api/channels/<channel>/recirculation/top`
 
 #### Query Parameters
 
@@ -97,7 +97,7 @@ List of top recirculations, with times visited from origin channel.
 ### 7.3. Top recirculations
 
 ```shell
-curl "analytics.getsocial.io/api/recirculation/top?limit=2&from=2018-01-01&to=2018-01-31" \
+curl "https://analytics.getsocial.io/api/recirculation/top?limit=2&from=2018-01-01&to=2018-01-31" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -125,7 +125,7 @@ criteria.
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/recirculation/top`
+`GET https://analytics.getsocial.io/api/recirculation/top`
 
 #### Query Parameters
 

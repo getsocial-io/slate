@@ -10,7 +10,7 @@ be missing the user ID.
 ### 6.1. List Events
 
 ```shell
-curl "analytics.getsocial.io/api/events/list?from=2018-01-01&to=2018-01-31&user=1200139&channel=facebook&limit=2" \
+curl "https://analytics.getsocial.io/api/events/list?from=2018-01-01&to=2018-01-31&user=1200139&channel=facebook&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -44,7 +44,7 @@ on submission.
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/events/list`
+`GET https://analytics.getsocial.io/api/events/list`
 
 #### Query Parameters
 
@@ -66,7 +66,7 @@ List of detailed conversion events, ordered by date.
 ### 6.2. Count Events
 
 ```shell
-curl "analytics.getsocial.io/api/events/count?story=274819848&type=purchases" \
+curl "https://analytics.getsocial.io/api/events/count?story=274819848&type=purchases" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -82,7 +82,7 @@ This endpoint counts the total number of events given the query arguments provid
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/events/count`
+`GET https://analytics.getsocial.io/api/events/count`
 
 #### Query Parameters
 
@@ -105,7 +105,7 @@ Total number of elements found.
 
 
 ```shell
-curl "analytics.getsocial.io/api/events/count/channels?from=2018-01-01&to=2018-01-31&user=AmAm1234&limit=2" \
+curl "https://analytics.getsocial.io/api/events/count/channels?from=2018-01-01&to=2018-01-31&user=AmAm1234&limit=2" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -128,7 +128,7 @@ Counts number of results grouped by an attribute (channel in this example), opti
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/count/<attribute>`
+`GET https://analytics.getsocial.io/api/count/<attribute>`
 
 #### Query Parameters
 
