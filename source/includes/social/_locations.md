@@ -3,7 +3,7 @@
 ### 7.1. Top Locations
 
 ```shell
-curl "analytics.getsocial.io/api/locations/top?from=2018-01-01&to=2018-01-31&sort_by=shares" \
+curl "https://analytics.getsocial.io/api/locations/top?from=2018-01-01&to=2018-01-31&sort_by=shares" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -43,7 +43,7 @@ This endpoint retrieves the overall top locations, with total shares and referra
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/locations/top`
+`GET https://analytics.getsocial.io/api/locations/top`
 
 #### Query Parameters
 

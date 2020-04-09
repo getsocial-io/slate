@@ -3,7 +3,7 @@
 ### 2.1. Fetch Site
 
 ```shell
-curl "analytics.getsocial.io/api/sites?from=2018-01-01&to=2018-01-05" \
+curl "https://analytics.getsocial.io/api/sites?from=2018-01-01&to=2018-01-05" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -23,7 +23,7 @@ This endpoint retrieves analytics data for a site observed between two specific 
 
 #### HTTP Request
 
-`GET http://analytics.getsocial.io/api/sites`
+`GET https://analytics.getsocial.io/api/sites`
 
 #### Query Parameters
 
