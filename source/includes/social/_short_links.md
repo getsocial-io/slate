@@ -1,6 +1,6 @@
 ## 8. Short Links
 
-###<a id="create-link"></a> 8.1. Create new short link
+###<a id="create-link"></a> 8.1. Create Short Link
 
 ```shell
 curl -X POST "https://analytics.getsocial.io/api/links" \
@@ -42,7 +42,7 @@ result       | `string`  | Whether call was successful. Is `ok` or `err`, in cas
 id           | `string`  | The short link ID
 link         | `string`  | The short link created
 
-### 8.2. Get link statistics
+### 8.2. Fetch Link Statistics
 
 ```shell
 curl "https://analytics.getsocial.io/api/links/abcdef?from=2020-01-20" \
