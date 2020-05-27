@@ -135,7 +135,7 @@ Field        | Type      | Description
 ### 3.3. Fetch Story
 
 ```shell
-curl "https://analytics.getsocial.io/api/stories/abcd1234?from=2018-01-01&to=2018-01-311" \
+curl "https://analytics.getsocial.io/api/stories/abcd1234?from=2018-01-01&to=2018-01-31&with_channels=true" \
   -H "Authorization: abcdef0123abcdef0123"
 ```
 
@@ -152,7 +152,11 @@ curl "https://analytics.getsocial.io/api/stories/abcd1234?from=2018-01-01&to=201
   "viral_score": 27.85,
   "sharing_rate": 6.25,
   "recirculation_percentage": 12.3,
-  "recirculation_depth": 4.32
+  "recirculation_depth": 4.32,
+  "channels": {
+    "DarkSocial": {"shares": 10, "referrals": 120, "viral_score": 3.05, "recirculation_percentage": 1.2, "recirculation_depth": 4},
+    "Facebook": {"shares": 30, "referrals": 30, "viral_score": 5.05, "recirculation_percentage": 2.2, "recirculation_depth": 4},
+  }
 }
 ```
 
@@ -167,9 +171,11 @@ This endpoint retrieves the story information with total visits, shares, referra
 
 Parameter | Type     | Default      | Description
 --------- | -------- | ------------ | --------
-story_id  | `string` | -            | Story identifier
+story_id  | `string` | -            | Story identifier or the encoded story path. In case you want to lookup by path instead of identifier, set the `look_by_path` parameter as `true` and send the path encoded in this field
+look_by_path  | `boolean` | `false` | In case of `true` the story will be queried via path instead of identifier
 from      | `string` | -            | Date from which to start counting data
 to        | `string` | -            | Date to which to stop counting data
+with_channels | `boolean` | false   | In case of `true` the analytics data for each channel is also provided
 
 
 <h4 id="story-returns">Returns</h4>
