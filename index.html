@@ -515,7 +515,7 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 <td>Top stories</td>
 </tr>
 </tbody></table>
-<h3 id='3-3-fetch-story'>3.3. Fetch Story</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://analytics.getsocial.io/api/stories/abcd1234?from=2018-01-01&amp;to=2018-01-311"</span> <span class="se">\</span>
+<h3 id='3-3-fetch-story'>3.3. Fetch Story</h3><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://analytics.getsocial.io/api/stories/abcd1234?from=2018-01-01&amp;to=2018-01-31&amp;with_channels=true"</span> <span class="se">\</span>
   -H <span class="s2">"Authorization: abcdef0123abcdef0123"</span>
 </code></pre>
 <blockquote>
@@ -531,7 +531,11 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
   </span><span class="s2">"viral_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">27.85</span><span class="p">,</span><span class="w">
   </span><span class="s2">"sharing_rate"</span><span class="p">:</span><span class="w"> </span><span class="mf">6.25</span><span class="p">,</span><span class="w">
   </span><span class="s2">"recirculation_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.3</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"recirculation_depth"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.32</span><span class="w">
+  </span><span class="s2">"recirculation_depth"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.32</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"channels"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"DarkSocial"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="s2">"viral_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.05</span><span class="p">,</span><span class="w"> </span><span class="s2">"recirculation_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span><span class="w"> </span><span class="s2">"recirculation_depth"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Facebook"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"shares"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="s2">"referrals"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="s2">"viral_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.05</span><span class="p">,</span><span class="w"> </span><span class="s2">"recirculation_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.2</span><span class="p">,</span><span class="w"> </span><span class="s2">"recirculation_depth"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">},</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves the story information with total visits, shares, referrals, share rate and virality score between the two dates specified (inclusive).</p>
@@ -550,7 +554,13 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 <td>story_id</td>
 <td><code>string</code></td>
 <td>-</td>
-<td>Story identifier</td>
+<td>Story identifier or the encoded story path. In case you want to lookup by path instead of identifier, set the <code>look_by_path</code> parameter as <code>true</code> and send the path encoded in this field</td>
+</tr>
+<tr>
+<td>look_by_path</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>In case of <code>true</code> the story will be queried via path instead of identifier</td>
 </tr>
 <tr>
 <td>from</td>
@@ -563,6 +573,12 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 <td><code>string</code></td>
 <td>-</td>
 <td>Date to which to stop counting data</td>
+</tr>
+<tr>
+<td>with_channels</td>
+<td><code>boolean</code></td>
+<td>false</td>
+<td>In case of <code>true</code> the analytics data for each channel is also provided</td>
 </tr>
 </tbody></table>
 
