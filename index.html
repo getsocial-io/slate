@@ -376,7 +376,8 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
     </span><span class="s2">"recirculation_percentage"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.3</span><span class="p">,</span><span class="w">
     </span><span class="s2">"recirculation_depth"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.21</span><span class="p">,</span><span class="w">
     </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Frigate Pallada"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="w">
+    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cursor_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f15a173dd497_51"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
@@ -415,6 +416,12 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 <td><code>number</code></td>
 <td>10</td>
 <td>Max number of results to retrieve</td>
+</tr>
+<tr>
+<td>starting_after</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>A cursor for use in pagination, an object ID that defines the place in the list. For instance, if you make a list request and receive 10 objects, ending with <code>cursor_id=f15a173dd497_51</code>, your subsequent call can include <code>starting_after=f15a173dd497_51</code> in order to fetch the next page of the list. The <code>cursor_id</code> value is available in the last returned story.</td>
 </tr>
 </tbody></table>
 <h4 id='returns'>Returns</h4>
