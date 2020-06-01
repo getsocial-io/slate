@@ -33,7 +33,8 @@ curl "https://analytics.getsocial.io/api/stories/top?from=2018-01-01&to=2018-01-
     "recirculation_percentage": 4.3,
     "recirculation_depth": 4.21,
     "title": "The Frigate Pallada",
-    "path": "/"
+    "path": "/",
+    "cursor_id": "f15a173dd497_51"
   }
 ]
 ```
@@ -53,7 +54,7 @@ from      | `string` | -            | Date from which to start counting data
 to        | `string` | -            | Date to which to stop counting data
 sort_by   | `string` | `shares`     | Criteria by which to sort stories, can be `visits`, `shares`, `referrals`, `sharing_rate`, `viral_score`, `recirculation_percentage` or `recirculation_depth`
 limit     | `number` | 10           | Max number of results to retrieve
-
+starting_after | `string` | -           | A cursor for use in pagination, an object ID that defines the place in the list. For instance, if you make a list request and receive 10 objects, ending with `cursor_id=f15a173dd497_51`, your subsequent call can include `starting_after=f15a173dd497_51` in order to fetch the next page of the list. The `cursor_id` value is available in the last returned story.
 
 #### Returns
 
