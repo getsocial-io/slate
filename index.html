@@ -561,13 +561,13 @@ You must replace <code>abcdef0123abcdef0123</code> with your personal API key.
 <td>story_id</td>
 <td><code>string</code></td>
 <td>-</td>
-<td>Story identifier or the encoded story path. In case you want to lookup by path instead of identifier, set the <code>look_by_path</code> parameter as <code>true</code> and send the path encoded in this field</td>
+<td>Story identifier. In case you want to lookup by path instead of identifier, set the <code>query</code> parameter with the path encoded. In that case, set <code>story_id</code> as <code>id</code></td>
 </tr>
 <tr>
-<td>look_by_path</td>
-<td><code>boolean</code></td>
-<td><code>false</code></td>
-<td>In case of <code>true</code> the story will be queried via path instead of identifier</td>
+<td>query</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>The parameter is optional but in case of present the story will be queried via the value given by this parameter instead of the value given by <code>story_id</code></td>
 </tr>
 <tr>
 <td>from</td>
