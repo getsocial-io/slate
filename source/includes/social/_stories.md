@@ -172,12 +172,11 @@ This endpoint retrieves the story information with total visits, shares, referra
 
 Parameter | Type     | Default      | Description
 --------- | -------- | ------------ | --------
-story_id  | `string` | -            | Story identifier or the encoded story path. In case you want to lookup by path instead of identifier, set the `look_by_path` parameter as `true` and send the path encoded in this field
-look_by_path  | `boolean` | `false` | In case of `true` the story will be queried via path instead of identifier
+story_id  | `string` | -            | Story identifier. In case you want to lookup by path instead of identifier, set the `query` parameter with the path encoded. In that case, set `story_id` as `id`
+query     | `string` | -            | The parameter is optional but in case of present the story will be queried via the value given by this parameter instead of the value given by `story_id`
 from      | `string` | -            | Date from which to start counting data
 to        | `string` | -            | Date to which to stop counting data
 with_channels | `boolean` | false   | In case of `true` the analytics data for each channel is also provided
-
 
 <h4 id="story-returns">Returns</h4>
 
